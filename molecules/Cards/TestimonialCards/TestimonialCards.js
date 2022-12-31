@@ -19,13 +19,13 @@ export const TestimonialCards = ({
       p="1.6rem 1.7rem 1.9rem 3rem"
       width={{ xs: "30.6rem", md: "49.3rem" }}
     >
-      <Text fontSize={{ xs: "1.8rem", md: "2.4rem" }} fontFamily="primaryBlack">
+      <Text fontSize={{ xs: "1.8rem", md: "2.4rem" }}>
         {title.slice(0, 30)}...
       </Text>
 
       <Text
         fontSize={{ xs: "1.6rem", md: "1.8rem" }}
-        fontFamily="primaryBook"
+        
         mt="1.7rem"
       >
         {description.slice(0, 200)}...
@@ -33,7 +33,7 @@ export const TestimonialCards = ({
 
       <Text
         fontSize={{ xs: "1.6rem", md: "1.8rem" }}
-        fontFamily="primaryBlack"
+         
         mt="1.2rem"
         color="primary.1200"
       >
@@ -67,13 +67,13 @@ export const TestimonialCards = ({
         <Box>
           <Text
             fontSize={{ xs: "1.8rem", md: "2.4rem" }}
-            fontFamily="primaryBlack"
+            
           >
             {author}
           </Text>
           <Text
             fontSize={{ xs: "1.4rem", md: "1.6rem" }}
-            fontFamily="primaryBook"
+            
           >
             {designation}
           </Text>

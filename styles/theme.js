@@ -16,9 +16,9 @@ breakpoints.xl = xl; // large monitor / 4k - 1600px
 // #region typography
 
 const fonts = {
-  primaryRegular: "AvenirRegular",
-  primaryBook: "AvenirBook",
-  primaryBlack: "AvenirBlack",
+  // primaryRegular: "",
+  primaryBook: "consola",
+  primaryBlack: "consolab",
 };
 // #endregion
 // #region colors
@@ -43,6 +43,12 @@ const colorSets = [
       { name: 1500, hex: "#E5C7F0" },
       { name: 1600, hex: "#FF0000" },
       { name: 1700, hex: "#646464" },
+      { name: 1800, hex: "#25215C" },
+      { name: 1900, hex: "#FFFFFF" },
+      { name: 2000, hex: "#2D5ABA" },
+      { name: 2100, hex: "#E9B544" },
+      
+      
     ],
   },
 ];

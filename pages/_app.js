@@ -6,7 +6,7 @@ import { theme } from "styles";
 import translations from "translations";
 import Script from "next/script";
 import "styles/globals.css";
-import "styles/styles.css";
+// import "styles/styles.css";
 import { Layout } from "templates";
 
 function MyApp({ Component, pageProps }) {
