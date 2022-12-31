@@ -1,18 +1,36 @@
-import { Text } from "atoms";
 import React from "react";
+import { Text } from "atoms";
 
-export const Heading = ({ as, name, children, ...props }) => {
+export const Heading = ({
+  Heading,
+  color,
+  textAlign,
+  mt,
+  mb,
+  mx,
+  maxWidth,
+  fontSize,
+}) => {
   return (
-    <Text as={as} m={0} fontWeight={700} {...props}>
-      {name}
-      {children}
+    <Text
+      as="h2"
+      m="0"
+      mt={mt}
+      mb={mb}
+      maxWidth={maxWidth}
+      mx={mx}
+      color={color}
+      textAlign={textAlign}
+      fontSize={fontSize}
+      fontWeight="700"
+    >
+      {Heading}
     </Text>
   );
 };
 
 Heading.defaultProps = {
-  as: "h2",
-  color: "neutral.800",
-  fontSize: { xs: "2.2rem", md: "2.8rem", lg: "4.8rem" },
-  lineHeight: { xs: "3.3rem", md: "4.2rem", lg: "6.4rem" },
+  color: "primary.700",
+  textAlign: "left",
+  fontSize: { xs: "2.6rem", md: "3.6rem", lg: "4.8rem" },
 };

@@ -96,8 +96,7 @@ export const DownloadModal = ({ isOpen, onRequestClose }) => {
                     {errors.fullName && touched.fullName ? (
                       <Box top="0rem" left="0rem">
                         <Text
-                          fontSize="1.4rem"
-                          fontFamily="AvenirBook"
+                          fontSize="1.4rem" 
                           color="primary.1600"
                           position="absolute"
                         >
@@ -121,7 +120,6 @@ export const DownloadModal = ({ isOpen, onRequestClose }) => {
                           fontSize="1.4rem"
                           color="primary.1600"
                           position="absolute"
-                          fontFamily="AvenirBook"
                         >
                           {errors.phone}
                         </Text>
@@ -142,14 +140,14 @@ export const DownloadModal = ({ isOpen, onRequestClose }) => {
                 <Box textAlign="left">
                   <Text
                     fontSize={{ xs: "2.4rem", md: "3.1rem" }}
-                    fontFamily="primaryBlack"
+                    fontWeight="500"
                   >
                     DOWNLOAD
                   </Text>
 
                   <Text
                     fontSize={{ xs: "1.5rem", md: "1.9rem" }}
-                    fontFamily="primaryRegular"
+                    
                     fontStyle="italic"
                   >
                     (Program Brochure & Schedule)

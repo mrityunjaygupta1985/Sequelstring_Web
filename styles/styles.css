@@ -1,18 +1,13 @@
 @font-face {
-  font-family: "AvenirRegular";
+  font-family: "consola";
   font-style: normal;
-  src: url(../public/fonts/Avenir-Regular.ttf) format("truetype");
+  src: url(../public/fonts/consola.ttf) format("truetype");
   font-display: swap;
 }
 @font-face {
-  font-family: "AvenirBlack";
+  font-family: "consolab";
   font-style: normal;
-  src: url(../public/fonts/Avenir-Black.ttf) format("truetype");
+  src: url(../public/fonts/consolab.ttf) format("truetype");
   font-display: swap;
 }
-@font-face {
-  font-family: "AvenirBook";
-  font-style: normal;
-  src: url(../public/fonts/Avenir-Book.ttf) format("truetype");
-  font-display: swap;
-}
+

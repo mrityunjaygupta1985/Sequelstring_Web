@@ -6,7 +6,7 @@ import MemoRightArrow from "public/assets/icons/RightArrow";
 export const FormButton = ({ mt }) => {
   return (
     <>
-      <Link href="/form">
+      <Link href="/contact">
         <a>
           <Button
             mt={mt}
@@ -17,13 +17,13 @@ export const FormButton = ({ mt }) => {
               <Box textAlign="left">
                 <Text
                   fontSize={{ xs: "1.5rem", md: "2.6rem" }}
-                  fontFamily="primaryBlack"
+                   
                 >
                   Get your pass
                 </Text>
                 <Text
                   fontSize={{ xs: "1.8rem", md: "3.1rem" }}
-                  fontFamily="primaryBlack"
+                   
                 >
                   CONNECT WITH US
                 </Text>

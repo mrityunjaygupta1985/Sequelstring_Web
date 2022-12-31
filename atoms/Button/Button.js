@@ -18,8 +18,7 @@ const ButtonBase = styled(Box)`
   ${variant({
     variants: {
       primary: {
-        color: theme.colors.primary[700],
-        fontFamily: "primaryBlack",
+        color: theme.colors.primary[1900], 
         /* fontSize: ["1.6rem", "1.6rem", "1.6rem", "1.8rem"], */
         borderRadius: "1rem",
         cursor: "pointer",
@@ -29,8 +28,8 @@ const ButtonBase = styled(Box)`
         whiteSpace: "nowrap",
         /* height: "10rem", */
         border: "0.3rem solid",
-        borderColor: "primary.1300",
-        bg: "primary.1300",
+        borderColor: "primary.1800",
+        bg: "primary.1800",
         /* boxShadow: `5px 8px 30px ${hexToRgba(
           theme.colors.primary[100],
           "0.5"
@@ -38,17 +37,17 @@ const ButtonBase = styled(Box)`
         outline: "none",
         "&:active, &:hover": {
           bg: "white",
-          color: "primary.1300",
+          color: "primary.1800",
         },
         "&:focus": {
           bg: "white",
-          color: "primary.1300",
+          color: "primary.1800",
           outline: "none",
         },
       },
       secondary: {
-        color: theme.colors.primary[700],
-        fontFamily: "primaryBlack",
+        color: theme.colors.primary[1800],
+        
         /* fontFamily: "primary", */
         /* fontSize: ["1.6rem", "1.6rem", "1.6rem", "1.8rem"], */
         borderRadius: "1rem",
@@ -58,8 +57,9 @@ const ButtonBase = styled(Box)`
         padding: "14px 16px",
         whiteSpace: "nowrap",
         /* height: "4.8rem", */
-        border: "0px solid white",
-        bg: "primary.1000",
+        border: ".3rem solid",
+        borderColor: "primary.1800",
+        bg: "primary.1900",
         outline: "none",
         /* "&:active, &:hover": {
           bg: "white",

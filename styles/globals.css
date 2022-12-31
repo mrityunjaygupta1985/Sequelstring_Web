@@ -2,6 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   color:#12100E;
 }
 
@@ -9,6 +11,7 @@ html {
   /* Set 1rem to the browser default (10px) */
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -18,18 +21,20 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 .error {
   color: #ff3816;
   position: absolute;
-  font-family: "AvenirBook";
+  font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
 }
 
 .success {
   color: #0c625c;
   position: absolute;
-  font-family: "AvenirBook";
+  font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
 }
 .otp-container {
@@ -86,28 +91,27 @@ a {
   .react-tel-input .form-control {
     height: 4.8rem !important;
     border: 1px solid #d9d9d9 !important;
-    border-radius: 1rem !important;
+    border-radius: 5px !important;
     margin-left: 9rem !important;
     width: calc(100% - 9rem) !important;
     padding-left: 1.5rem !important;
     color: #646464 !important;
-    font-family: "AvenirBook";
+    font-family: "Roboto", sans-serif;
     font-size: 1.8rem !important;
   }
   .react-tel-input .form-control:hover {
-    border: 1px solid #023047 !important;
+    /* border: 1px solid #023047 !important; */
     color: #646464 !important;
   }
   .react-tel-input .form-control:active,
   .react-tel-input .form-control:focus-within {
-    border: 1px solid #262626 !important;
+    /* border: 1px solid #262626 !important; */
     color: #646464 !important;
   }
-  .react-tel-input .flag-dropdown {
-    border-radius: 1rem !important;
+  .react-tel-input .flag-dropdown { 
     padding-left: 20px !important;
     padding-right: 20px !important;
-    border-radius: 1rem !important;
+    border-radius: 5px !important;
     background-color: white !important;
     width: 8rem !important;
   }
@@ -147,7 +151,7 @@ a {
   padding-right: 1.2rem;
   width: 100%;
   border-radius: 5px;
-  font-family: "AvenirBook";
+  font-family: "Roboto", sans-serif;
 }
 .profile-input::placeholder {
   color: #646464;
@@ -205,7 +209,7 @@ select:-webkit-autofill:focus {
   margin-right: 10px;
   outline: none;
   border-radius: 50%;
-  font-family: "AvenirBook";
+  font-family: "Roboto", sans-serif;
 }
 
 .input-radio[type="radio"]:checked {
@@ -235,7 +239,7 @@ select:-webkit-autofill:focus {
   display: inline-block;
   margin-right: 10px;
   outline: none; 
-  font-family: "AvenirBook"; 
+  font-family: "Roboto", sans-serif;
 }
 
 .input-checkbox[type="checkbox"]:checked {
@@ -243,4 +247,37 @@ select:-webkit-autofill:focus {
 }
 .input-checkbox[type="checkbox"]::after {
   color: #ffffff;
+}
+
+/* .marquee {
+  gap: 20px;
+} */
+.overlay {
+  --gradient-width: 0px !important;
+}
+ 
+
+
+@media (max-width: 992px) {
+
+/* .profile-input { 
+    font-size: 1.8rem;
+  }
+
+.react-tel-input .form-control { 
+    font-size: 1.8rem !important;
+}
+
+.profile-input:-webkit-autofill,
+.profile-input:-webkit-autofill:hover,
+.profile-input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus { 
+  font-size: 1.8rem !important; 
+} */
+
 }

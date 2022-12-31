@@ -7,6 +7,7 @@ import { theme } from "styles";
 import { Box, Button, Flex, Grid, Text } from "atoms";
 import MenuIcon from "public/assets/icons/MenuIcon";
 import CloseMenu from "public/assets/icons/CloseMenu";
+import { opacity } from "styled-system";
 
 export const Header = () => {
   const [active, setActive] = useState("");
@@ -29,24 +30,53 @@ export const Header = () => {
   const pageData = [
     {
       id: "0",
-      name: "About",
-      url: "about",
+      name: "Home",
+      url: "/",
     },
+    // {
+    //   id: "1",
+    //   name: "Platform",
+    //   url: "platform",
+    // },
+    // {
+    //   id: "1",
+    //   name: "Solutions",
+    //   url: "solutions",
+    // },
     {
       id: "1",
-      name: "Skills",
-      url: "skills",
+      name: "Resources",
+      url: "resources",
     },
     {
       id: "2",
-      name: "Portfolio",
-      url: "portfolio",
+      name: "Company",
+      url: "company",
     },
     {
       id: "3",
-      name: "Contact",
-      url: "contact",
+      name: "Support",
+      url: "support",
     },
+    {
+      id: "4",
+      name: "SAP Automation",
+      url: "sap-automation",
+    },
+    {
+      id: "5",
+      name: "Customer Speaks",
+      url: "customer-speaks",
+    },
+
+    
+
+    
+    // {
+    //   id: "5",
+    //   name: "Contact Us",
+    //   url: "contact",
+    // },
   ];
   return (
     <Box
@@ -56,40 +86,49 @@ export const Header = () => {
       height={{ xs: "6rem", lg: "9rem" }}
       transition="all 0.3s ease 0s"
       width={{ xs: "100%", lg: "100%", ml: "100%" }}
-      bg={scroll ? "rgba(17, 2, 198, 1)" : "red"}      
+      // bg={scroll ? "#4275FA" : "#00bfff"}     
+      bg="white"     
+      boxShadow="rgb(0 0 0 / 25%) 0px 0px 6px" 
     >
       <Flex
         justifyContent="space-between"
         py={{ xs: "3rem", lg: "2rem" }}
-        px={{ xs: "2rem", md: "2.8rem", lg: "7rem" }}
+        px={{ xs: "2.4rem", md: "2.8rem", lg: "8rem" }}
         alignItems="center"
-        height={{ xs: "6rem", lg: "9rem" }}
+        height={{ xs: "0rem", lg: "9rem" }}
         bg={
           mobileMenu
-            ? "linear-gradient(98.94deg, #4275FA -23.73%, rgba(17, 2, 198, 0.87) 118.38%)"
+            ? "transparent"
             : "transparent"
         }
       >
+       
         <Link href="/">
           <a rel="noopener noreferrer">
-            <Text
-              cursor="pointer"
-              fontSize={{ xs: "2rem", md: "2.6rem" }}
-              fontWeight="400"
-              fontFamily="Pacifico"
-              color="white"
-            >
-              Mrityunjay's Portfolio
-            </Text>
+              <Box 
+                width={{xs:"20rem", lg: "30rem" }}
+                height={{xs:"5.6rem", lg: "8.3rem" }}       
+                // display={{ xs: "none", lg: "block" }}          
+              >
+              <Image
+                  src="/images/logo.png"
+                  alt="logo"
+                  quality={100}
+                  width={300}
+                  height={83}
+                  objectFit="contain"
+                />
+              </Box>
           </a>
         </Link>
 
-        <Box> 
         {/* display={{ xs: "none", lg: "block" }} */}
-          <Grid gridAutoFlow="column" justifyContent="center" gridGap="3rem">
-            {pageData.map((pages) => {
+        
+        <Grid gridAutoFlow="column" justifyContent="center" gridGap="3rem">
+            {pageData.map((items) => {
+               
               return (
-                <Box key={pages.id}>
+                <Box key={items.id} display={{ xs: "none", lg: "block" }}>
                   <Grid
                     gridAutoFlow="column"
                     gridGap="6px"
@@ -97,64 +136,81 @@ export const Header = () => {
                     alignItems="center"
                     className="title-text"
                   >
-                    <a href={`#${pages.url}`} rel="noopener noreferrer">
+                    <a href={`${items.url}`} rel="noopener noreferrer">
                       <Text
-                        color="white"
+                        color="black"
                         cursor="pointer"
-                        fontSize="1.8rem"
-                        textTransform="uppercase"
+                        fontSize="1.8rem"            
+                        _hover={{opacity: .7}}                        
+                        // textTransform="uppercase"
                         borderBottom={
-                          router.pathname == pages?.url ? "3px solid" : "none"
+                          router.pathname == items?.url ? "3px solid" : "none"
                         }
                         borderColor="white"
-                        fontWeight={500}
+                        fontWeight={400}
                       >
-                        {pages?.name}
+                        {items?.name}
                       </Text>
                     </a>
                   </Grid>
                 </Box>
               );
             })}
-          </Grid>
-        </Box>
+          </Grid> 
+          
+          <Box display={{ xs: "none", lg: "block" }}>
+          <Button 
+            variant="primary" 
+            width={{ xs: "100%", md: "20rem" }}           
+          >           
+                <Text
+                  fontSize={{ xs: "1.8rem", md: "2rem" }}
+                  fontWeight="500"                  
+                >
+                  Request a Demo
+                </Text> 
+          </Button>
+
+          {/* <CloseMenu width="2rem" height="2rem" /> */}
+
+          </Box>
 
         <Box
           display={{ xs: "block", lg: "none" }}
-          onClick={() => setMobileMenu(!mobileMenu)}
-          color="white"
+          onClick={() => setMobileMenu(!mobileMenu)}           
           cursor="pointer"
         >
-          {mobileMenu ? <CloseMenu /> : <MenuIcon />}
+          {mobileMenu ? <CloseMenu width="2rem" height="2rem" /> : <MenuIcon width="2rem" height="2rem" />}
         </Box>
       </Flex>
+      
+      {/* For mobile */}
+
       {mobileMenu && (
         <Box
-          bg="rgba(17, 2, 198, 1)"
+          bg="primary.1800"
           position="fixed"
           height="auto"
           display={{ xs: "block", lg: "none" }}
           width="100%"
+          pb="4rem"
         >
           <Grid
             justifyContent="left"
-            gridRowGap="2.8rem"
-            my="2rem"
-            ml={{ xs: "3rem", md: "7rem", lg: "unset" }}
+            gridRowGap="2.6rem"
+            my="3rem"
+            mx={{ xs: "3rem", md: "7rem", lg: "unset" }}
           >
             {pageData.map((pages) => {
               return (
                 <Box key={pages.id}>
                   <Flex justifyContent="left">
-                    <a href={`#${pages.url}`} rel="noopener noreferrer">
+                    <a href={`${pages.url}`} rel="noopener noreferrer">
                       <Text
-                        fontSize="1.6rem"
-                        lineHeight="2.4rem"
-                        fontWeight="700"
-                        textAlign="center"
+                        fontSize="1.8rem" 
+                        fontWeight="400" 
                         color="white"
-                        cursor="pointer"
-                        textTransform="capitalise"
+                        cursor="pointer" 
                         onClick={() => setMobileMenu(false)}
                       >
                         {pages?.name}
@@ -165,8 +221,27 @@ export const Header = () => {
               );
             })}
           </Grid>
+
+          <Box mt="6rem" mx={{ xs: "3rem", md: "7rem", lg: "unset" }} display={{ xs: "block", lg: "none" }}>
+          <Button 
+            variant="secondary" 
+            width={{ xs: "100%"}}           
+          >           
+                <Text
+                  fontSize={{ xs: "1.8rem", md: "2rem" }}
+                  fontWeight="500"                  
+                >
+                  Request a Demo
+              </Text> 
+          </Button>
+
+          {/* <CloseMenu width="2rem" height="2rem" /> */}
+
+          </Box>
         </Box>
       )}
+
+      
     </Box>
   );
 };

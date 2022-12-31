@@ -15,3 +15,4 @@ export * from "./Description";
 export * from "./NumberList";
 export * from "./TestimonialHeading";
 export * from "./FormButton"; 
+export * from "./FormText"
