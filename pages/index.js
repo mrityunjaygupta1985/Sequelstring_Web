@@ -14,12 +14,8 @@ export const Home = () => {
         //  description="A portfolio website developed by Yatharth Sah, who is a Frontend Enthusiast and skilled in Next Js, React Js and Headless CMS"
         //  keywords="Sequelstring"
       />
-      <HeroSection /> 
-
-      <OurClients />  
-          
-
-       
+      <HeroSection />
+      <OurClients />
     </>
   );
 };

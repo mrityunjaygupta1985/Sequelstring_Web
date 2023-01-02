@@ -18,11 +18,11 @@ const ButtonBase = styled(Box)`
   ${variant({
     variants: {
       primary: {
-        color: theme.colors.primary[1900], 
+        color: theme.colors.primary[1900],
         /* fontSize: ["1.6rem", "1.6rem", "1.6rem", "1.8rem"], */
         borderRadius: "1rem",
         cursor: "pointer",
-        transition: "all .3s",
+        transition: "all .7s",
         fontWeight: 500,
         padding: "14px 16px",
         whiteSpace: "nowrap",
@@ -37,6 +37,7 @@ const ButtonBase = styled(Box)`
         outline: "none",
         "&:active, &:hover": {
           bg: "white",
+          transition: "all .7s",
           color: "primary.1800",
         },
         "&:focus": {
@@ -47,12 +48,12 @@ const ButtonBase = styled(Box)`
       },
       secondary: {
         color: theme.colors.primary[1800],
-        
+
         /* fontFamily: "primary", */
         /* fontSize: ["1.6rem", "1.6rem", "1.6rem", "1.8rem"], */
         borderRadius: "1rem",
         cursor: "pointer",
-        transition: "all .3s",
+        transition: "all .6s",
         /* fontWeight: 500, */
         padding: "14px 16px",
         whiteSpace: "nowrap",
@@ -72,27 +73,25 @@ const ButtonBase = styled(Box)`
         // },
       },
       blue: {
-        color: "white",
-        fontFamily: "primary",
-        fontSize: ["1.6rem", "1.6rem", "1.6rem", "1.8rem"],
-        borderRadius: "5rem",
+        color: theme.colors.primary[1800],
+        borderRadius: "1rem",
         cursor: "pointer",
-        transition: "all .3s",
-        fontWeight: 500,
-        padding: "10px 32px",
+        transition: "all .7s",
+        padding: "8px 12px",
+        /* boxShadow: "2px 2px 20px #25215C", */
         whiteSpace: "nowrap",
-        height: "4.8rem",
-        border: "1px solid #4275FA",
-        bg: "#4275FA",
+        border: ".3rem solid",
+        borderColor: "primary.1800",
+        bg: "primary.1900",
         outline: "none",
         "&:active, &:hover": {
-          bg: "#4275FA",
+          bg: "primary.1800",
           color: "white",
+          transition: "all .7s",
         },
         "&:focus": {
-          bg: "#4275FA",
+          bg: "primary.1800",
           color: "white",
-          outline: "none",
         },
       },
     },

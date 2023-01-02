@@ -47,6 +47,9 @@ a {
 .image-circle img {
   border-radius: 30rem;
 }
+.image-15 img {
+  border-radius: 15px;
+ }
 
 .player-wrapper {
   position: relative;
@@ -281,3 +284,5 @@ select:-webkit-autofill:focus {
 } */
 
 }
+
+

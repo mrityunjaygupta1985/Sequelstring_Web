@@ -30,18 +30,11 @@ export const Footer = () => {
         px={{ xs: "2.4rem", lg: "7rem" }}
         py="2rem"
       >
-        <Text
-          fontSize={{ xs: "1.4rem", md: "1.6rem" }}           
-          color="white"          
-        >
-           Sequelstring 2022 © All Rights Reserved.
+        <Text fontSize={{ xs: "1.4rem", md: "1.6rem" }} color="white">
+          Sequelstring 2022 © All Rights Reserved.
         </Text>
-        <Text
-          mt="1rem"
-          fontSize={{ xs: "1.4rem", md: "1.6rem" }}         
-          color="white"
-        >
-          Built with ❤️ in JAMstack
+        <Text mt="1rem" fontSize={{ xs: "1.4rem", md: "1.6rem" }} color="white">
+          Built with ❤️ in SequelString
         </Text>
       </Flex>
     </Box>
