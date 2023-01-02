@@ -28,12 +28,12 @@ const colorSets = [
     colors: [
       { name: 100, hex: "#F5F5F5" },
       { name: 200, hex: "#000000" },
-      { name: 300, hex: "#4D4D4D" },
+      { name: 300, hex: "#50A5F1" },
       { name: 400, hex: "#DEE9EF" },
       { name: 500, hex: "#FFD6D8" },
       { name: 600, hex: "#929C9D29" },
       { name: 700, hex: "#12100E" },
-      { name: 800, hex: "#9A9A9A" },
+      { name: 800, hex: "#d9d9d9" },
       { name: 900, hex: "#BABABA" },
       { name: 1000, hex: "#FACB27" },
       { name: 1100, hex: "#707070" },
@@ -47,8 +47,7 @@ const colorSets = [
       { name: 1900, hex: "#FFFFFF" },
       { name: 2000, hex: "#2D5ABA" },
       { name: 2100, hex: "#E9B544" },
-      
-      
+      { name: 2200, hex: "#BCBECE" },
     ],
   },
 ];

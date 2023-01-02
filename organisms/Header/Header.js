@@ -51,7 +51,7 @@ export const Header = () => {
     {
       id: "2",
       name: "Company",
-      url: "company",
+      url: "about",
     },
     {
       id: "3",
@@ -63,20 +63,17 @@ export const Header = () => {
       name: "SAP Automation",
       url: "sap-automation",
     },
-    {
-      id: "5",
-      name: "Customer Speaks",
-      url: "customer-speaks",
-    },
-
-    
-
-    
     // {
     //   id: "5",
-    //   name: "Contact Us",
-    //   url: "contact",
+    //   name: "Customer Speaks",
+    //   url: "customer-speaks",
     // },
+
+    {
+      id: "5",
+      name: "Contact Us",
+      url: "contact",
+    },
   ];
   return (
     <Box
@@ -86,9 +83,9 @@ export const Header = () => {
       height={{ xs: "6rem", lg: "9rem" }}
       transition="all 0.3s ease 0s"
       width={{ xs: "100%", lg: "100%", ml: "100%" }}
-      // bg={scroll ? "#4275FA" : "#00bfff"}     
-      bg="white"     
-      boxShadow="rgb(0 0 0 / 25%) 0px 0px 6px" 
+      // bg={scroll ? "#4275FA" : "#00bfff"}
+      bg="white"
+      boxShadow="rgb(0 0 0 / 25%) 0px 0px 6px"
     >
       <Flex
         justifyContent="space-between"
@@ -96,94 +93,88 @@ export const Header = () => {
         px={{ xs: "2.4rem", md: "2.8rem", lg: "8rem" }}
         alignItems="center"
         height={{ xs: "0rem", lg: "9rem" }}
-        bg={
-          mobileMenu
-            ? "transparent"
-            : "transparent"
-        }
+        bg={mobileMenu ? "transparent" : "transparent"}
       >
-       
         <Link href="/">
           <a rel="noopener noreferrer">
-              <Box 
-                width={{xs:"20rem", lg: "30rem" }}
-                height={{xs:"5.6rem", lg: "8.3rem" }}       
-                // display={{ xs: "none", lg: "block" }}          
-              >
+            <Box
+              width={{ xs: "20rem", lg: "30rem" }}
+              height={{ xs: "5.6rem", lg: "8.3rem" }}
+              // display={{ xs: "none", lg: "block" }}
+            >
               <Image
-                  src="/images/logo.png"
-                  alt="logo"
-                  quality={100}
-                  width={300}
-                  height={83}
-                  objectFit="contain"
-                />
-              </Box>
+                src="/images/logo.webp"
+                alt="logo"
+                quality={100}
+                width={300}
+                height={83}
+                objectFit="contain"
+              />
+            </Box>
           </a>
         </Link>
 
         {/* display={{ xs: "none", lg: "block" }} */}
-        
+
         <Grid gridAutoFlow="column" justifyContent="center" gridGap="3rem">
-            {pageData.map((items) => {
-               
-              return (
-                <Box key={items.id} display={{ xs: "none", lg: "block" }}>
-                  <Grid
-                    gridAutoFlow="column"
-                    gridGap="6px"
-                    justifyContent="center"
-                    alignItems="center"
-                    className="title-text"
-                  >
-                    <a href={`${items.url}`} rel="noopener noreferrer">
-                      <Text
-                        color="black"
-                        cursor="pointer"
-                        fontSize="1.8rem"            
-                        _hover={{opacity: .7}}                        
-                        // textTransform="uppercase"
-                        borderBottom={
-                          router.pathname == items?.url ? "3px solid" : "none"
-                        }
-                        borderColor="white"
-                        fontWeight={400}
-                      >
-                        {items?.name}
-                      </Text>
-                    </a>
-                  </Grid>
-                </Box>
-              );
-            })}
-          </Grid> 
-          
-          <Box display={{ xs: "none", lg: "block" }}>
-          <Button 
-            variant="primary" 
-            width={{ xs: "100%", md: "20rem" }}           
-          >           
-                <Text
-                  fontSize={{ xs: "1.8rem", md: "2rem" }}
-                  fontWeight="500"                  
+          {pageData.map((items) => {
+            return (
+              <Box key={items.id} display={{ xs: "none", lg: "block" }}>
+                <Grid
+                  gridAutoFlow="column"
+                  gridGap="6px"
+                  justifyContent="center"
+                  alignItems="center"
+                  className="title-text"
                 >
+                  <a href={`${items.url}`} rel="noopener noreferrer">
+                    <Text
+                      color="black"
+                      cursor="pointer"
+                      fontSize="1.8rem"
+                      _hover={{ opacity: 0.7 }}
+                      // textTransform="uppercase"
+                      borderBottom={
+                        router.pathname == items?.url ? "3px solid" : "none"
+                      }
+                      borderColor="white"
+                      fontWeight={400}
+                    >
+                      {items?.name}
+                    </Text>
+                  </a>
+                </Grid>
+              </Box>
+            );
+          })}
+        </Grid>
+
+        <Box display={{ xs: "none", lg: "block" }}>
+          <Link href="/demo">
+            <a>
+              <Button variant="primary" width={{ xs: "100%", md: "20rem" }}>
+                <Text fontSize={{ xs: "1.8rem", md: "2rem" }} fontWeight="500">
                   Request a Demo
-                </Text> 
-          </Button>
-
+                </Text>
+              </Button>
+            </a>
+          </Link>
           {/* <CloseMenu width="2rem" height="2rem" /> */}
-
-          </Box>
+        </Box>
 
         <Box
           display={{ xs: "block", lg: "none" }}
-          onClick={() => setMobileMenu(!mobileMenu)}           
+          onClick={() => setMobileMenu(!mobileMenu)}
           cursor="pointer"
         >
-          {mobileMenu ? <CloseMenu width="2rem" height="2rem" /> : <MenuIcon width="2rem" height="2rem" />}
+          {mobileMenu ? (
+            <CloseMenu width="2rem" height="2rem" />
+          ) : (
+            <MenuIcon width="2rem" height="2rem" />
+          )}
         </Box>
       </Flex>
-      
+
       {/* For mobile */}
 
       {mobileMenu && (
@@ -207,10 +198,10 @@ export const Header = () => {
                   <Flex justifyContent="left">
                     <a href={`${pages.url}`} rel="noopener noreferrer">
                       <Text
-                        fontSize="1.8rem" 
-                        fontWeight="400" 
+                        fontSize="1.8rem"
+                        fontWeight="400"
                         color="white"
-                        cursor="pointer" 
+                        cursor="pointer"
                         onClick={() => setMobileMenu(false)}
                       >
                         {pages?.name}
@@ -222,26 +213,21 @@ export const Header = () => {
             })}
           </Grid>
 
-          <Box mt="6rem" mx={{ xs: "3rem", md: "7rem", lg: "unset" }} display={{ xs: "block", lg: "none" }}>
-          <Button 
-            variant="secondary" 
-            width={{ xs: "100%"}}           
-          >           
-                <Text
-                  fontSize={{ xs: "1.8rem", md: "2rem" }}
-                  fontWeight="500"                  
-                >
-                  Request a Demo
-              </Text> 
-          </Button>
+          <Box
+            mt="6rem"
+            mx={{ xs: "3rem", md: "7rem", lg: "unset" }}
+            display={{ xs: "block", lg: "none" }}
+          >
+            <Button variant="secondary" width={{ xs: "100%" }}>
+              <Text fontSize={{ xs: "1.8rem", md: "2rem" }} fontWeight="500">
+                Request a Demo
+              </Text>
+            </Button>
 
-          {/* <CloseMenu width="2rem" height="2rem" /> */}
-
+            {/* <CloseMenu width="2rem" height="2rem" /> */}
           </Box>
         </Box>
       )}
-
-      
     </Box>
   );
 };

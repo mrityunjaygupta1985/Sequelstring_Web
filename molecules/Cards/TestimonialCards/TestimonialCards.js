@@ -1,41 +1,36 @@
 import React from "react";
-import { Box, Text, Grid, Flex } from "atoms";
+import { Box, Text, Grid } from "atoms";
 import Image from "next/image";
 
-export const TestimonialCards = ({
-  title,
-  description,
-  src,
-  alt,
-  author,
-  designation,
-}) => {
+export const TestimonialCards = ({ title, description, src, alt, author }) => {
   return (
     <Box
       bg="white"
       border=".1rem solid"
-      borderColor="primary.1100"
+      borderColor="primary.1800"
       borderRadius="1rem"
-      p="1.6rem 1.7rem 1.9rem 3rem"
-      width={{ xs: "30.6rem", md: "49.3rem" }}
+      p="2rem"
+      width={{ xs: "30rem", md: "40rem", lg: "49rem" }}
     >
-      <Text fontSize={{ xs: "1.8rem", md: "2.4rem" }}>
-        {title.slice(0, 30)}...
-      </Text>
-
       <Text
-        fontSize={{ xs: "1.6rem", md: "1.8rem" }}
-        
-        mt="1.7rem"
+        fontSize={{ xs: "2rem", md: "2.2rem", lg: "2.4rem" }}
+        fontWeight="700"
       >
-        {description.slice(0, 200)}...
+        {title}
+      </Text>
+      <Text
+        fontSize={{ xs: "1.8rem", lg: "2rem" }}
+        lineHeight={{ xs: "2.4rem", lg: "2.8rem" }}
+        mt="1.5rem"
+      >
+        {description.slice(0, 160)}...
       </Text>
 
       <Text
-        fontSize={{ xs: "1.6rem", md: "1.8rem" }}
-         
+        fontSize={{ xs: "1.8rem", lg: "2rem" }}
         mt="1.2rem"
-        color="primary.1200"
+        color="primary.1800"
+        fontWeight="700"
       >
         READ MORE
       </Text>
@@ -66,16 +61,10 @@ export const TestimonialCards = ({
         </Box>
         <Box>
           <Text
-            fontSize={{ xs: "1.8rem", md: "2.4rem" }}
-            
+            fontSize={{ xs: "1.8rem", md: "2.2rem", lg: "2.4rem" }}
+            fontWeight="500"
           >
             {author}
-          </Text>
-          <Text
-            fontSize={{ xs: "1.4rem", md: "1.6rem" }}
-            
-          >
-            {designation}
           </Text>
         </Box>
       </Grid>

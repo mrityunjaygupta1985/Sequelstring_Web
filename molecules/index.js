@@ -3,5 +3,6 @@ export * from "./HeroSection";
 export * from "./Cards";  
 export * from "./VideoModal";   
 export * from "./ContactForm";
-export * from "./VideoModal";
-export * from "./OurClients"
+export * from "./OurClients";
+export * from "./ContactInfo";
+export * from "./RequestDemo";

@@ -14,5 +14,5 @@ export * from "./Heading";
 export * from "./Description";
 export * from "./NumberList";
 export * from "./TestimonialHeading";
-export * from "./FormButton"; 
-export * from "./FormText"
+export * from "./FormText";
+export * from "./SubHeading";

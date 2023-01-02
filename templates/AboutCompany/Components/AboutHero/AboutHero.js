@@ -1,0 +1,62 @@
+import React from "react";
+import { Grid, Box, Text, Flex, Heading, SubHeading, Description } from "atoms";
+import Image from "next/image";
+
+export const AboutHero = () => {
+  return (
+    <>
+      <Box
+        as="section"
+        //   bg="#DFE1E8"
+        //   bg="#BCBECE"
+        maxWidth={{ lg: "100%", xl: "144rem" }}
+      >
+        <Box
+          m={{
+            xs: "4rem 2.4rem",
+            md: "5rem 4rem",
+            xm: "6rem 6rem",
+            lg: "8rem 16rem",
+          }}
+        >
+          <Heading textAlign="center" mb="1.5rem" Heading="About Us" />
+          <Description
+            textAlign="center"
+            Description="We are leading automation company helping various industries by building solutions on RPA and Block chain."
+          />
+        </Box>
+        <Box
+          p={{
+            xs: "3rem 2.4rem",
+            md: "3rem 4rem",
+            xm: "3rem 6rem",
+            lg: "4rem 16rem",
+          }}
+          background="linear-gradient(185.29deg,#BCBECE 5.49%,#DFE1E8 52.78%);"
+        >
+          <SubHeading SubHeading="Sequelstring" />
+          <Description
+            mt="1.5rem"
+            Description="In June 2018, Sequelstring was founded by Ravish Sahay, promoted and supported by alumnus of Harvard, IIT and IIM. Sequelstring is an automation start-up based in Mumbai, India."
+          />
+          <Description
+            mt="1.5rem"
+            Description="As on date have customers across the industry, using their solution. To name few like Mahindra Home Finance, Cosmo Films, Piramal, E&Y, Luminous, Indus Towers, Times Of India, Mahindra Integrated Business Solutions, Shahi Exports, Oberoi Group, Hero MotoCorp, DB Corp, Aknamed, Brookfield and many more."
+          />
+          <Description
+            mt="1.5rem"
+            Description="Sequelstring is currently building solutions on RPA and Block chain, which is based on Python and extensively using machine learning. We have also set up an R&D Lab in Don Bosco Institute of Technology-one of the Premium Technical Institute of Country."
+          />
+          <Description
+            mt="1.5rem"
+            Description="SequelString is having clear vision and Roadmap to create Value under H1- Horizon One ( Exploit) and H2 – Horizon Two (Explore) framework."
+          />
+          <Description
+            mt="1.5rem"
+            Description="Under H1 Roadmap venture is focusing on Organisation’s current problem and addressing it through its Integrated Automation Platform."
+          />
+        </Box>
+      </Box>
+    </>
+  );
+};
