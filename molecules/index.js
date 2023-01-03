@@ -6,3 +6,4 @@ export * from "./ContactForm";
 export * from "./OurClients";
 export * from "./ContactInfo";
 export * from "./RequestDemo";
+export * from "./FaqPage";

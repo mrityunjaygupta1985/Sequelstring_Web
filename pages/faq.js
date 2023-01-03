@@ -1,8 +1,8 @@
 import React from "react";
-import { RequestDemo } from "molecules";
+import { FaqPage } from "molecules";
 
 export const Demo = () => {
-  return <RequestDemo />;
+  return <FaqPage />;
 };
 
 export default Demo;

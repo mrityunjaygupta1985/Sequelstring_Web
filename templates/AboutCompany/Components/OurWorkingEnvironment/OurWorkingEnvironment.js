@@ -34,7 +34,7 @@ export const OurWorkingEnvironment = () => {
     arrows: false,
     adaptiveHeight: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
   };
 
   return (
