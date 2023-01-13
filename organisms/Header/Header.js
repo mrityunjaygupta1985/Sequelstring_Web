@@ -108,10 +108,10 @@ export const Header = () => {
                       fontSize="1.8rem"
                       _hover={{ opacity: 0.6 }}
                       // textTransform="uppercase"
-                      borderBottom={
-                        router.pathname == items?.url ? "3px solid" : "none"
-                      }
-                      borderColor="primary.1800"
+                      // borderBottom={
+                      //   router.pathname == items?.url ? "3px solid" : "none"
+                      // }
+                      // borderColor="primary.1800"
                       fontWeight={400}
                     >
                       {items?.name}
