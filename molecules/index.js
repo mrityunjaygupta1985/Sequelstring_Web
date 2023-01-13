@@ -7,3 +7,5 @@ export * from "./OurClients";
 export * from "./ContactInfo";
 export * from "./RequestDemo";
 export * from "./FaqPage";
+export * from "./Automate";
+export * from "./DidYouKnow";

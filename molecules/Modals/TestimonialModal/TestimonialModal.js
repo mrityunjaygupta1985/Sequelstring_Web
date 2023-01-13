@@ -77,7 +77,7 @@ export const TestimonialModal = ({ isOpen, onRequestClose, data }) => {
             <Box>
               <Text
                 fontSize={{ xs: "2rem", md: "2.2rem", lg: "2.4rem" }}
-                fontWeight="500"
+                fontWeight="700"
               >
                 {data?.title}
               </Text>
@@ -90,9 +90,9 @@ export const TestimonialModal = ({ isOpen, onRequestClose, data }) => {
                 {data?.description}
               </Text>
               <Text
-                mt={{ xs: "2rem", md: "4rem" }}
+                mt={{ xs: "2rem", md: "3rem" }}
                 fontSize={{ xs: "1.8rem", md: "2.2rem", lg: "2.4rem" }}
-                fontWeight="500"
+                fontWeight="700"
               >
                 {data?.author}
               </Text>

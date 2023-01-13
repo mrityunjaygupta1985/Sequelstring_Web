@@ -99,8 +99,9 @@ export const FaqPage = () => {
                 <>
                   <Flex
                     key={items.id}
-                    bg="primary.2300"
+                    bg="primary.2200"
                     p="1.5rem 2rem"
+                    gridGap="4rem"
                     borderBottom=".4rem solid"
                     borderColor="white"
                     alignItems="center"
@@ -111,7 +112,10 @@ export const FaqPage = () => {
                       else setActive(items?.id);
                     }}
                   >
-                    <Box fontWeight="500" fontSize="2.2rem">
+                    <Box
+                      fontWeight="500"
+                      fontSize={{ xs: "1.6rem", md: "2rem", lg: "2.2rem" }}
+                    >
                       {items?.title}
                     </Box>
                     <Box

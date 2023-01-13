@@ -7,7 +7,6 @@ import { theme } from "styles";
 import { Box, Button, Flex, Grid, Text } from "atoms";
 import MenuIcon from "public/assets/icons/MenuIcon";
 import CloseMenu from "public/assets/icons/CloseMenu";
-import { opacity } from "styled-system";
 
 export const Header = () => {
   const [active, setActive] = useState("");
@@ -30,50 +29,25 @@ export const Header = () => {
   const pageData = [
     {
       id: "0",
-      name: "Home",
+      name: "Platform",
       url: "/",
     },
-    // {
-    //   id: "1",
-    //   name: "Platform",
-    //   url: "platform",
-    // },
-    // {
-    //   id: "1",
-    //   name: "Solutions",
-    //   url: "solutions",
-    // },
     {
       id: "1",
-      name: "Resources",
-      url: "resources",
+      name: "Solutions",
+      url: "solutions",
     },
     {
       id: "2",
       name: "Company",
       url: "about",
     },
-    {
-      id: "3",
-      name: "Support",
-      url: "support",
-    },
-    {
-      id: "4",
-      name: "SAP Automation",
-      url: "sap-automation",
-    },
-    // {
-    //   id: "5",
-    //   name: "Customer Speaks",
-    //   url: "customer-speaks",
-    // },
 
-    {
-      id: "5",
-      name: "Contact Us",
-      url: "contact",
-    },
+    // {
+    //   id: "3",
+    //   name: "Contact",
+    //   url: "contact",
+    // },
   ];
   return (
     <Box
@@ -98,16 +72,16 @@ export const Header = () => {
         <Link href="/">
           <a rel="noopener noreferrer">
             <Box
-              width={{ xs: "20rem", lg: "30rem" }}
-              height={{ xs: "5.6rem", lg: "8.3rem" }}
+              width={{ xs: "20rem", lg: "25rem" }}
+              height={{ xs: "5.6rem", lg: "7.1rem" }}
               // display={{ xs: "none", lg: "block" }}
             >
               <Image
                 src="/images/logo.webp"
                 alt="logo"
                 quality={100}
-                width={300}
-                height={83}
+                width={250}
+                height={71}
                 objectFit="contain"
               />
             </Box>
@@ -116,7 +90,7 @@ export const Header = () => {
 
         {/* display={{ xs: "none", lg: "block" }} */}
 
-        <Grid gridAutoFlow="column" justifyContent="center" gridGap="3rem">
+        <Grid gridAutoFlow="column" justifyContent="center" gridGap="5rem">
           {pageData.map((items) => {
             return (
               <Box key={items.id} display={{ xs: "none", lg: "block" }}>
@@ -129,15 +103,15 @@ export const Header = () => {
                 >
                   <a href={`${items.url}`} rel="noopener noreferrer">
                     <Text
-                      color="black"
+                      color="primary.700"
                       cursor="pointer"
                       fontSize="1.8rem"
-                      _hover={{ opacity: 0.7 }}
+                      _hover={{ opacity: 0.6 }}
                       // textTransform="uppercase"
                       borderBottom={
                         router.pathname == items?.url ? "3px solid" : "none"
                       }
-                      borderColor="white"
+                      borderColor="primary.1800"
                       fontWeight={400}
                     >
                       {items?.name}
@@ -147,6 +121,32 @@ export const Header = () => {
               </Box>
             );
           })}
+
+          <Box
+            position="absolute"
+            bg="white"
+            // width="30rem"
+            boxShadow="0px 4px 20px rgba(0, 0, 0, 0.1)"
+            borderRadius="1rem"
+            p="2rem"
+            top="4.5rem"
+            display="none"
+          >
+            <Text
+              color="primary.700"
+              cursor="pointer"
+              fontSize="1.8rem"
+              p="0.9rem"
+              fontWeight="500"
+              _hover={{
+                bg: "primary.2400",
+                color: "primary.1800",
+              }}
+              borderRadius=".4rem"
+            >
+              About Us
+            </Text>
+          </Box>
         </Grid>
 
         <Box display={{ xs: "none", lg: "block" }}>

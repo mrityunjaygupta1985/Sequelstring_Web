@@ -24,7 +24,7 @@ const ButtonBase = styled(Box)`
         cursor: "pointer",
         transition: "all .7s",
         fontWeight: 500,
-        padding: "14px 16px",
+        padding: "12px 16px",
         whiteSpace: "nowrap",
         /* height: "10rem", */
         border: "0.3rem solid",

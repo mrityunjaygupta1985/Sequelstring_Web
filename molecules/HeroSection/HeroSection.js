@@ -1,7 +1,48 @@
 import React from "react";
-import { Grid, Box, Flex, Heading, Description } from "atoms";
+import {
+  Grid,
+  Box,
+  Flex,
+  Heading,
+  Description,
+  Button,
+  Text,
+  SubHeading,
+} from "atoms";
 import Image from "next/image";
 import Link from "next/link";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const teamData = [
+  {
+    id: 0,
+    src: "/images/MyVideo1.gif",
+    alt: "banner-3",
+  },
+  {
+    id: 1,
+    src: "/images/banner-1.png",
+    alt: "banner-1",
+  },
+  {
+    id: 2,
+    src: "/images/banner-2.png",
+    alt: "banner-2",
+  },
+  {
+    id: 3,
+    src: "/images/banner-4.png",
+    alt: "banner-4",
+  },
+  // {
+  //   id: 4,
+  //   src: "/images/banner-5.gif",
+  //   alt: "banner-5",
+  // },
+];
 
 import { Controls, Player } from "@lottiefiles/react-lottie-player";
 import styled from "styled-components";
@@ -49,95 +90,167 @@ const BoxStyleSecond = styled(Box)`
 `;
 
 export const HeroSection = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    arrows: false,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 2500,
+  };
+
   return (
-    <Box
-      as="section"
-      m={{
-        xs: "4rem 2.4rem",
-        md: "5rem 4rem",
-        xm: "5rem 6rem",
-        lg: "6rem 16rem",
-      }}
-      maxWidth={{ lg: "100%", xl: "144rem" }}
-    >
-      <Grid
-        gridTemplateColumns={{ md: "1fr 1fr" }}
-        gridGap="3.4rem"
-        alignItems="center"
+    <>
+      {/* banner section */}
+      <Box mx="8rem">
+        <Slider {...settings}>
+          {teamData.map((items, index) => {
+            return (
+              <Box
+                key={index}
+                width="100%"
+                height={{ xs: "20rem", md: "30rem", mx: "40rem", lg: "65rem" }}
+                //   className="image-15"
+              >
+                <Image
+                  src={items?.src}
+                  alt={items?.alt}
+                  quality={100}
+                  layout="fill"
+                />
+              </Box>
+            );
+          })}
+        </Slider>
+
+        {/* <Box position="absolute" top="37rem" left="10rem">
+          <Flex>
+            <Link href="/demo">
+              <a>
+                <Button variant="blue" width={{ xs: "100%", md: "20rem" }}>
+                  <Text
+                    fontSize={{ xs: "1.8rem", md: "2rem" }}
+                    fontWeight="500"
+                    py=".5rem"
+                  >
+                    Request a Demo
+                  </Text>
+                </Button>
+              </a>
+            </Link>
+            <Link href="/demo">
+              <a>
+                <Button
+                  variant="blue"
+                  width={{ xs: "100%", md: "17rem" }}
+                  ml="2rem"
+                >
+                  <Text
+                    fontSize={{ xs: "1.8rem", md: "2rem" }}
+                    fontWeight="500"
+                    py=".5rem"
+                  >
+                    Try for Free
+                  </Text>
+                </Button>
+              </a>
+            </Link>
+          </Flex>
+        </Box> */}
+      </Box>
+
+      <Box
+        as="section"
+        m={{
+          xs: "4rem 2.4rem",
+          md: "5rem 4rem",
+          xm: "5rem 6rem",
+          lg: "6rem 16rem",
+        }}
+        maxWidth={{ lg: "100%", xl: "144rem" }}
       >
-        <Box>
-          <Heading Heading="Lorem ipsum dolor sit amet, consectetur" />
-          <Description
-            mt="1.5rem"
-            Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-        </Box>
+        <Grid
+          gridTemplateColumns={{ md: "1fr 1fr" }}
+          gridGap="3.4rem"
+          alignItems="center"
+        >
+          <Box>
+            <Heading Heading="The leader in automation software" />
+            {/* <Description
+              mt="1.5rem"
+              Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            /> */}
+          </Box>
 
-        <Flex justifyContent="end">
-          <BoxStyleFirst
-            mx={{ xs: "auto", md: "unset" }}
-            width={{
-              xs: "18rem",
-              md: "22rem",
-              xm: "30rem",
-              lg: "51rem",
-            }}
-            height={{
-              xs: "18rem",
-              md: "22rem",
-              xm: "30rem",
-              lg: "43rem",
-            }}
-          >
-            <Player
-              autoplay
-              loop
-              src="/images/robot-1.json"
-              // style={{ width: 510, height: 510 }}
-              objectfit="contain"
+          <Flex justifyContent="end">
+            <BoxStyleFirst
+              mx={{ xs: "auto", md: "unset" }}
+              width={{
+                xs: "18rem",
+                md: "22rem",
+                xm: "30rem",
+                lg: "51rem",
+              }}
+              height={{
+                xs: "18rem",
+                md: "22rem",
+                xm: "30rem",
+                lg: "43rem",
+              }}
             >
-              <Controls visible={false} />
-            </Player>
-          </BoxStyleFirst>
-        </Flex>
+              <Player
+                autoplay
+                loop
+                src="/images/robot-1.json"
+                // style={{ width: 510, height: 510 }}
+                objectfit="contain"
+              >
+                <Controls visible={false} />
+              </Player>
+            </BoxStyleFirst>
+          </Flex>
 
-        <Box order={{ xs: 1, md: 0 }}>
-          <BoxStyleSecond
-            mx={{ xs: "auto", lg: "unset" }}
-            width={{
-              xs: "18rem",
-              md: "22rem",
-              xm: "30rem",
-              lg: "41rem",
-            }}
-            height={{
-              xs: "18rem",
-              md: "22rem",
-              xm: "30rem",
-              lg: "41rem",
-            }}
-          >
-            <Player
-              autoplay
-              loop
-              src="/images/robot-2.json"
-              // style={{ width: 510, height: 510 }}
-              objectfit="contain"
+          <Box order={{ xs: 1, md: 0 }}>
+            <BoxStyleSecond
+              mx={{ xs: "auto", lg: "unset" }}
+              width={{
+                xs: "18rem",
+                md: "22rem",
+                xm: "30rem",
+                lg: "41rem",
+              }}
+              height={{
+                xs: "18rem",
+                md: "22rem",
+                xm: "30rem",
+                lg: "41rem",
+              }}
             >
-              <Controls visible={false} />
-            </Player>
-          </BoxStyleSecond>
-        </Box>
+              <Player
+                autoplay
+                loop
+                src="/images/robot-2.json"
+                // style={{ width: 510, height: 510 }}
+                objectfit="contain"
+              >
+                <Controls visible={false} />
+              </Player>
+            </BoxStyleSecond>
+          </Box>
 
-        <Box>
-          {/* order={{ xs: 1, lg: 0 }} */}
-          <Heading Heading="Lorem ipsum dolor sit amet, consectetur" />
-          <Description
-            mt="1.5rem"
-            Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          />
-        </Box>
-      </Grid>
-    </Box>
+          <Box>
+            {/* order={{ xs: 1, lg: 0 }} */}
+            <Heading Heading="Lorem ipsum dolor sit amet, consectetur" />
+            <Description
+              mt="1.5rem"
+              Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            />
+          </Box>
+        </Grid>
+      </Box>
+    </>
   );
 };

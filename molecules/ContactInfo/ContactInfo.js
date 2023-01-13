@@ -6,6 +6,7 @@ import MemoTwitter from "public/assets/icons/Twitter";
 import MemoPhone from "public/assets/icons/Phone";
 import MemoMail from "public/assets/icons/Mail";
 import MemoLocation from "public/assets/icons/Location";
+import Link from "next/link";
 
 export const ContactInfo = () => {
   return (
@@ -35,49 +36,70 @@ export const ContactInfo = () => {
         </Text>
         <Description
           mt="2rem"
-          mb={{ xs: "4rem", md: "6rem" }}
+          mb={{ xs: "3rem", md: "4rem" }}
           color="white"
           Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         />
-        <Grid
-          gridTemplateColumns="4rem 1fr"
-          mt="2rem"
-          alignItems="center"
-          cursor="pointer"
-        >
-          <Box color="primary.300">
-            <MemoPhone width="2rem" height="2rem" />
-          </Box>
-          <Description color="white" Description="+91-9999999999" />
-        </Grid>
-        <Grid
-          gridTemplateColumns="4rem 1fr"
-          mt="2rem"
-          alignItems="center"
-          cursor="pointer"
-        >
-          <Box color="primary.300">
-            <MemoMail width="2.3rem" height="1.8rem" />
-          </Box>
-          <Text
-            fontSize={{ xs: "1.8rem", md: "2rem" }}
-            color="white"
-            lineHeight={{ xs: "2.4rem", md: "2.8rem" }}
-          >
-            info@sequelstring.com
-          </Text>
-        </Grid>
+        <Link href="tel:+91-8448447751">
+          <a>
+            <Grid
+              gridTemplateColumns="4rem 1fr"
+              mt="2rem"
+              alignItems="center"
+              cursor="pointer"
+            >
+              <Box color="primary.300">
+                <MemoPhone width="2rem" height="2rem" />
+              </Box>
+              <Description color="white" Description="+91-8448447751" />
+            </Grid>
+          </a>
+        </Link>
+
+        <Link href="mailto:info@sequelstring.com">
+          <a>
+            <Grid
+              gridTemplateColumns="4rem 1fr"
+              mt="2rem"
+              alignItems="center"
+              cursor="pointer"
+            >
+              <Box color="primary.300">
+                <MemoMail width="2.3rem" height="1.8rem" />
+              </Box>
+              <Text
+                fontSize={{ xs: "1.8rem", md: "2rem" }}
+                color="white"
+                lineHeight={{ xs: "2.4rem", md: "2.8rem" }}
+              >
+                info@sequelstring.com
+              </Text>
+            </Grid>
+          </a>
+        </Link>
+
         <Grid gridTemplateColumns="4rem 1fr" mt="2rem">
           <Box mt=".5rem" color="primary.300">
             <MemoLocation width="2.2rem" height="2.8rem" />
           </Box>
-          <Description
-            maxWidth={{ lg: "30rem" }}
-            color="white"
-            Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do."
-          />
+          <Box>
+            <Description
+              color="white"
+              fontWeight="500"
+              Description="R&D Innovation Lab"
+            />
+            <Description
+              color="white"
+              Description="Don Bosco Institute Of Technology"
+            />
+            <Description
+              color="white"
+              maxWidth={{ lg: "30rem" }}
+              Description="Premier Automobiles Road Opp. HDIL Premier Exotica, Kurla, w, Maharashtra 400070"
+            />
+          </Box>
         </Grid>
-        <Flex mt="8rem" alignItems="center ">
+        <Flex mt={{ xs: "3rem", xm: "5rem" }} alignItems="center ">
           <Box color="white">
             <MemoLinkedin width="3rem" height="3rem" cursor="pointer" />
           </Box>
