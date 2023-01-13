@@ -19,24 +19,25 @@ import "slick-carousel/slick/slick-theme.css";
 const teamData = [
   {
     id: 0,
-    src: "/images/MyVideo1.gif",
+    src: "/images/banner-4.png",
     alt: "banner-3",
   },
   {
     id: 1,
-    src: "/images/banner-1.png",
+    src: "/images/banner-2.png",
     alt: "banner-1",
   },
-  {
-    id: 2,
-    src: "/images/banner-2.png",
-    alt: "banner-2",
-  },
-  {
-    id: 3,
-    src: "/images/banner-4.png",
-    alt: "banner-4",
-  },
+
+  // {
+  //   id: 2,
+  //   src: "/images/banner-2.png",
+  //   alt: "banner-2",
+  // },
+  // {
+  //   id: 3,
+  //   src: "/images/banner-4.png",
+  //   alt: "banner-4",
+  // },
   // {
   //   id: 4,
   //   src: "/images/banner-5.gif",
@@ -112,7 +113,7 @@ export const HeroSection = () => {
               <Box
                 key={index}
                 width="100%"
-                height={{ xs: "20rem", md: "30rem", mx: "40rem", lg: "65rem" }}
+                height={{ xs: "20rem", md: "30rem", mx: "40rem", lg: "45rem" }}
                 //   className="image-15"
               >
                 <Image
