@@ -60,11 +60,7 @@ export const OurTeams = () => {
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
       >
-        <SubHeading
-          textAlign="center"
-          mb="4rem"
-          SubHeading="Lorem ipsum dolor sit amet"
-        />
+        <SubHeading textAlign="center" mb="4rem" SubHeading="Meet Our Team" />
         <Box
           display={{ xs: "grid", xm: "flex" }}
           flexWrap="wrap"
@@ -91,11 +87,11 @@ export const OurTeams = () => {
                     />
                   </Box>
                 </Flex>
-                <Text mt="2rem" fontWeight="700" fontSize="2.2rem">
+                <Text mt="1.5rem" fontWeight="700" fontSize="2.2rem">
                   {items?.name}
                 </Text>
                 <Description
-                  mt="1rem"
+                  mt=".6rem"
                   fontWeight="500"
                   color="primary.1100"
                   Description={items?.title}

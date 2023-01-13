@@ -1,9 +1,6 @@
 import React from "react";
-import { 
-  HeroSection,
-  OurClients,
-} from "molecules";
-import SEO from "seo/SEO"; 
+import { Automate, DidYouKnow, HeroSection, OurClients } from "molecules";
+import SEO from "seo/SEO";
 
 export const Home = () => {
   return (
@@ -16,6 +13,8 @@ export const Home = () => {
       />
       <HeroSection />
       <OurClients />
+      {/* <Automate /> */}
+      <DidYouKnow />
     </>
   );
 };

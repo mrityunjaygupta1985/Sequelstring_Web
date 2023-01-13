@@ -1,7 +1,8 @@
 import React from "react";
-import { Grid, Box, Text, Flex, Description } from "atoms";
+import { Grid, Box, Text, Flex, Description, SubHeading, Heading } from "atoms";
 import Image from "next/image";
 import MemoLinkedin from "public/assets/icons/Linkedin";
+import MemoTwitter from "public/assets/icons/Twitter";
 
 const foundersData = [
   {
@@ -39,6 +40,7 @@ export const OurFounders = () => {
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
       >
+        <Heading mb="5rem" textAlign="center" Heading="Leadership Team" />
         <Grid
           gridTemplateColumns="repeat(3, 1fr)"
           gridGap={{ xs: "2rem", lg: "4rem" }}
@@ -76,9 +78,14 @@ export const OurFounders = () => {
                   color="primary.1100"
                   Description={items?.title}
                 />
-                <Box color="primary.1800" mt="1.5rem" _hover={{ opacity: 0.8 }}>
-                  <MemoLinkedin width="3rem" height="3rem" cursor="pointer" />
-                </Box>
+                <Flex mt="1.5rem" alignItems="center">
+                  <Box color="primary.1800" _hover={{ opacity: 0.8 }}>
+                    <MemoLinkedin width="3rem" height="3rem" cursor="pointer" />
+                  </Box>
+                  <Box color="primary.1800" ml="2rem" _hover={{ opacity: 0.8 }}>
+                    <MemoTwitter width="3rem" height="3rem" cursor="pointer" />
+                  </Box>
+                </Flex>
               </Box>
             );
           })}

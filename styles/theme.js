@@ -44,10 +44,13 @@ const colorSets = [
       { name: 1600, hex: "#FF0000" },
       { name: 1700, hex: "#646464" },
       { name: 1800, hex: "#25215C" },
+
       { name: 1900, hex: "#FFFFFF" },
       { name: 2000, hex: "#2D5ABA" },
       { name: 2100, hex: "#E9B544" },
-      { name: 2200, hex: "#BCBECE" },
+      { name: 2200, hex: "#C5CDE1" },
+      { name: 2300, hex: "#DFE1E8" },
+      { name: 2400, hex: "#25215c08" },
     ],
   },
 ];

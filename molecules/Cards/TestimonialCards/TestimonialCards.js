@@ -62,7 +62,7 @@ export const TestimonialCards = ({ title, description, src, alt, author }) => {
         <Box>
           <Text
             fontSize={{ xs: "1.8rem", md: "2.2rem", lg: "2.4rem" }}
-            fontWeight="500"
+            fontWeight="700"
           >
             {author}
           </Text>

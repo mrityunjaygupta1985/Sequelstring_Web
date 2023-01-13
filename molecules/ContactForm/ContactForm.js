@@ -133,6 +133,7 @@ export const ContactForm = () => {
                 gridRowGap={{ xs: "2.5rem", xm: "3rem" }}
                 bg="white"
                 overflow="hidden"
+                alignItems="center"
               >
                 {/* <ContactInfo /> */}
 
@@ -305,8 +306,8 @@ export const ContactForm = () => {
                   </BoxStyleFirst>
 
                   <Text
-                    fontSize={{ xs: "2rem", md: "2.4rem", lg: "2.8rem" }}
-                    fontWeight="500"
+                    fontSize={{ xs: "2rem", lg: "2.2rem" }}
+                    fontWeight="700"
                     ml="4rem"
                   >
                     India
@@ -325,10 +326,18 @@ export const ContactForm = () => {
                       <Description Description="Premier Automobiles Road Opp. HDIL Premier Exotica, Kurla, w, Maharashtra 400070" />
                     </Box>
                   </Grid>
+                  <Grid gridTemplateColumns="4rem 1fr" mt="1rem">
+                    <Box mt=".5rem" color="primary.1800">
+                      <MemoLocation width="2.2rem" height="2.8rem" />
+                    </Box>
+                    <Box>
+                      <Description Description="House No. 90 Basement, New Manglapuri, Opposite Metro Pillar No. 51, New Delhi, 110030" />
+                    </Box>
+                  </Grid>
 
                   <Text
-                    fontSize={{ xs: "2rem", md: "2.4rem", lg: "2.8rem" }}
-                    fontWeight="500"
+                    fontSize={{ xs: "2rem", lg: "2.2rem" }}
+                    fontWeight="700"
                     ml="4rem"
                     mt="2rem"
                   >

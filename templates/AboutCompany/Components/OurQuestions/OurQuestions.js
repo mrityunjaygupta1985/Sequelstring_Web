@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Box, Text, Flex, Description, SubHeading, Button } from "atoms";
-import Image from "next/image";
+import Link from "next/link";
 
 import { Controls, Player } from "@lottiefiles/react-lottie-player";
 import styled from "styled-components";
@@ -30,14 +30,20 @@ const quesData = [
   {
     id: 0,
     buttonText: "FAQ",
+    src: "/images/faq.json",
+    href: "/faq",
   },
   {
     id: 1,
     buttonText: "Get in touch",
+    src: "/images/emailbox.json",
+    href: "/contact",
   },
   {
     id: 2,
     buttonText: "Request a demo",
+    src: "/images/schedule-demo.json",
+    href: "/demo",
   },
 ];
 
@@ -80,31 +86,35 @@ export const OurQuestions = () => {
             {quesData.map((items, index) => {
               return (
                 <Box key={index} bg="white" p="2rem" borderRadius=".8rem">
-                  <BoxStyleFirst mx="auto" width="15rem" height="15rem">
-                    <Player
-                      autoplay
-                      loop
-                      src="/images/faq.json"
-                      objectfit="contain"
-                    >
+                  <BoxStyleFirst
+                    mx="auto"
+                    width="15rem"
+                    height="15rem"
+                    mt={items?.mt}
+                  >
+                    <Player autoplay loop src={items?.src} objectfit="contain">
                       <Controls visible={false} />
                     </Player>
                   </BoxStyleFirst>
 
-                  <Button
-                    mt="1rem"
-                    variant="blue"
-                    width={{ xs: "100%", lg: "100%" }}
-                  >
-                    <Flex alignItems="center" justifyContent="center">
-                      <Text
-                        fontSize={{ xs: "1.8rem", md: "2rem" }}
-                        fontWeight="500"
+                  <Link href={items?.href}>
+                    <a>
+                      <Button
+                        mt="1rem"
+                        variant="blue"
+                        width={{ xs: "100%", lg: "100%" }}
                       >
-                        {items?.buttonText}
-                      </Text>
-                    </Flex>
-                  </Button>
+                        <Flex alignItems="center" justifyContent="center">
+                          <Text
+                            fontSize={{ xs: "1.8rem", md: "2rem" }}
+                            fontWeight="500"
+                          >
+                            {items?.buttonText}
+                          </Text>
+                        </Flex>
+                      </Button>
+                    </a>
+                  </Link>
                 </Box>
               );
             })}
