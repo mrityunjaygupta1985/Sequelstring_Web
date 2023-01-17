@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Grid,
-  Box,
-  Flex,
-  Heading,
-  Description,
-  Button,
-  Text,
-  SubHeading,
-} from "atoms";
+import { Grid, Box, Flex, Heading, Description, Text, SubHeading } from "atoms";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,16 +19,16 @@ const teamData = [
     alt: "banner-1",
   },
 
-  // {
-  //   id: 2,
-  //   src: "/images/banner-2.png",
-  //   alt: "banner-2",
-  // },
-  // {
-  //   id: 3,
-  //   src: "/images/banner-4.png",
-  //   alt: "banner-4",
-  // },
+  {
+    id: 2,
+    src: "/images/banner-5.png",
+    alt: "banner-2",
+  },
+  {
+    id: 3,
+    src: "/images/banner-6.png",
+    alt: "banner-4",
+  },
   // {
   //   id: 4,
   //   src: "/images/banner-5.gif",
@@ -47,6 +38,9 @@ const teamData = [
 
 import { Controls, Player } from "@lottiefiles/react-lottie-player";
 import styled from "styled-components";
+
+import { ImpactBusiness } from "molecules/ImpactBusiness";
+import { RpaServices } from "molecules/RpaServices";
 
 const BoxStyleFirst = styled(Box)`
   @media only screen and (max-width: 600px) {
@@ -107,13 +101,58 @@ export const HeroSection = () => {
     <>
       {/* banner section */}
       <Box mx="8rem">
+        <Heading
+          textAlign="center"
+          color="primary.1800"
+          mt="3rem"
+          mb="1rem"
+          Heading="AI (Artificial Intelligence) Vs IA (Intelligent Automation)"
+        />
+        <Text
+          color="primary.1800"
+          fontSize={{ xs: "2rem", md: "2.6rem" }}
+          textAlign="center"
+          mb="1rem"
+        >
+          An Integrated Automation Platform
+        </Text>
+        <Text
+          color="primary.1800"
+          fontSize={{ xs: "2rem", md: "2.6rem" }}
+          textAlign="center"
+          mb="2rem"
+        >
+          is driving{" "}
+          <Text
+            as="span"
+            fontSize={{ xs: "2rem", md: "2.6rem" }}
+            fontWeight="700"
+          >
+            Intelligent Automation
+          </Text>{" "}
+          while leveraging{" "}
+          <Text
+            as="span"
+            fontSize={{ xs: "2rem", md: "2.6rem" }}
+            fontWeight="700"
+          >
+            Artificial Intelligence.
+          </Text>
+        </Text>
+
+        {/* is driving Intelligent Automation while leveraging Artificial Intelligence. */}
         <Slider {...settings}>
           {teamData.map((items, index) => {
             return (
               <Box
                 key={index}
                 width="100%"
-                height={{ xs: "20rem", md: "30rem", mx: "40rem", lg: "45rem" }}
+                height={{
+                  xs: "20rem",
+                  md: "30rem",
+                  mx: "40rem",
+                  lg: "45rem",
+                }}
                 //   className="image-15"
               >
                 <Image
@@ -126,7 +165,6 @@ export const HeroSection = () => {
             );
           })}
         </Slider>
-
         {/* <Box position="absolute" top="37rem" left="10rem">
           <Flex>
             <Link href="/demo">
@@ -162,6 +200,9 @@ export const HeroSection = () => {
           </Flex>
         </Box> */}
       </Box>
+
+      <ImpactBusiness />
+      <RpaServices />
 
       <Box
         as="section"

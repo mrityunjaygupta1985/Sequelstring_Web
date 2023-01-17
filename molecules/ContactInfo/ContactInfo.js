@@ -12,7 +12,7 @@ export const ContactInfo = () => {
   return (
     <>
       <Box
-        bg="primary.2000"
+        bg="secondary.700"
         overflow="hidden"
         borderRadius="2rem"
         p={{ xs: "4rem 2rem", md: "2rem 3rem" }}

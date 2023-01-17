@@ -53,7 +53,7 @@ const teamData = [
     id: 7,
     src: "/images/gallery/team-08.png",
     alt: "team-08",
-    SubHeading: "Diwali Puja",
+    SubHeading: "Christmas Celebration",
   },
   {
     id: 8,

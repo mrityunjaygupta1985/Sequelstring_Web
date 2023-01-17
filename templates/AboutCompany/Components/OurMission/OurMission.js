@@ -112,18 +112,15 @@ export const OurMission = () => {
           mt="5rem"
         >
           <Box>
-            <Box
-              width={{ xs: "100%", lg: "100%" }}
-              height={{ xs: "20rem", lg: "25rem" }}
-            >
+            <Box width="50rem" height="46.1rem">
               <Image
-                src="/images/goal-1.jpg"
+                src="/images/goal-1.png"
                 alt="value"
                 quality={100}
-                // width={200}
-                // height={200}
-                layout="fill"
-                // objectFit="contain"
+                width={500}
+                height={461}
+                // layout="fill"
+                objectFit="contain"
               />
             </Box>
           </Box>

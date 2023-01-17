@@ -1,5 +1,11 @@
 import React from "react";
-import { Automate, DidYouKnow, HeroSection, OurClients } from "molecules";
+import {
+  Automate,
+  DidYouKnow,
+  HeroSection,
+  OurClients,
+  RpaFinance,
+} from "molecules";
 import SEO from "seo/SEO";
 
 export const Home = () => {
@@ -12,8 +18,10 @@ export const Home = () => {
         //  keywords="Sequelstring"
       />
       <HeroSection />
+      <RpaFinance />
+      <Automate />
       <OurClients />
-      {/* <Automate /> */}
+
       <DidYouKnow />
     </>
   );
