@@ -52,22 +52,43 @@ export const Automate = () => {
   return (
     <Box
       as="section"
-      p={{
+      m={{
         xs: "4rem 2.4rem",
         md: "5rem 4rem",
         xm: "5rem 6rem",
         lg: "6rem 16rem",
       }}
-      my="8rem"
-      bg="primary.2200"
       maxWidth={{ lg: "100%", xl: "144rem" }}
     >
-      <Heading textAlign="center" Heading="Lorem ipsum dolor sit amet" />
-      <Description
-        mt="1.5rem"
-        textAlign="center"
-        Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      />
+      <Heading textAlign="center" Heading="What can be automated?" />
+      <Heading textAlign="center" Heading="A lot!" />
+
+      <Grid
+        mt="4rem"
+        alignItems="center"
+        gridTemplateColumns="1.5fr 1fr"
+        gridColumnGap="3rem"
+        justifyItems="end"
+      >
+        <Box>
+          <Description
+            mb="1.5rem"
+            Description="There are key areas of opportunity for automation inside finance and accounting. From customer onboarding and invoicing, to cash application, to logistics management to invoice processing, to payments processing."
+          />
+          <Description Description="Nearly any process can benefit from automation inside finance and accounting. In the next page, you will discover process heatmaps that highlight where automation has the biggest potential across the business unit." />
+        </Box>
+
+        <Box height="22.2rem" width="37.2rem">
+          <Image
+            src="/images/finance-2.png"
+            alt="finance-2"
+            quality={100}
+            objectFit="contain"
+            width={372}
+            height={222}
+          />
+        </Box>
+      </Grid>
     </Box>
   );
 };

@@ -50,7 +50,21 @@ const colorSets = [
       { name: 2100, hex: "#E9B544" },
       { name: 2200, hex: "#C5CDE1" },
       { name: 2300, hex: "#DFE1E8" },
-      { name: 2400, hex: "#25215c08" },
+      { name: 2400, hex: "#F2EDFF" },
+    ],
+  },
+
+  {
+    name: "secondary",
+    colors: [
+      { name: 100, hex: "#F2EDFF" },
+      { name: 200, hex: "#D9D4FF" },
+      { name: 300, hex: "#BFBAFA" },
+      { name: 400, hex: "#A5A0E0" },
+      { name: 500, hex: "#8C87C7" },
+      { name: 600, hex: "#736EAE" },
+      { name: 700, hex: "#595491" },
+      { name: 800, hex: "#403B7B" },
     ],
   },
 ];

@@ -30,7 +30,7 @@ export const SubHeading = ({
 
 SubHeading.defaultProps = {
   fontWeight: "700",
-  color: "primary.700",
+  color: "primary.1800",
   textAlign: "left",
   fontSize: { xs: "2.2rem", md: "2.6rem", lg: "3.2rem" },
 };

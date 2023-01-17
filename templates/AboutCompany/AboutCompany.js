@@ -1,6 +1,7 @@
 import React from "react";
 import {
   AboutHero,
+  BestInMarket,
   OurFounders,
   OurMission,
   OurQuestions,
@@ -13,6 +14,7 @@ export const AboutCompany = () => {
   return (
     <>
       <AboutHero />
+      <BestInMarket />
       <OurFounders />
       <OurMission />
       <OurWorkingEnvironment />

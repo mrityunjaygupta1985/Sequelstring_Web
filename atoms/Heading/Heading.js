@@ -30,7 +30,8 @@ export const Heading = ({
 };
 
 Heading.defaultProps = {
-  color: "primary.700",
+  color: "primary.1800",
+  // color: "primary.700",
   textAlign: "left",
   fontSize: { xs: "2.6rem", md: "3.6rem", lg: "4rem" },
 };

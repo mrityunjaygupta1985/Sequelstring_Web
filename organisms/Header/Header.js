@@ -29,18 +29,18 @@ export const Header = () => {
   const pageData = [
     {
       id: "0",
-      name: "Platform",
+      name: "Home",
       url: "/",
     },
     {
       id: "1",
-      name: "Solutions",
-      url: "solutions",
+      name: "About Us",
+      url: "about",
     },
     {
       id: "2",
-      name: "Company",
-      url: "about",
+      name: "Contact Us",
+      url: "contact",
     },
 
     // {

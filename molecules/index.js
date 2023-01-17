@@ -9,3 +9,6 @@ export * from "./RequestDemo";
 export * from "./FaqPage";
 export * from "./Automate";
 export * from "./DidYouKnow";
+export * from "./ImpactBusiness";
+export * from "./RpaServices";
+export * from "./RpaFinance";

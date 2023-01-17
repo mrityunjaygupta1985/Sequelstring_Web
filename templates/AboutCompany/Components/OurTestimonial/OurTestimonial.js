@@ -78,7 +78,7 @@ export const OurTestimonial = () => {
 
   return (
     <>
-      <Box bg="primary.2200" py="8rem">
+      <Box bg="secondary.200" py="8rem">
         <SubHeading
           textAlign="center"
           mb="4rem"
