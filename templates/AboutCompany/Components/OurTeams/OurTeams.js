@@ -6,45 +6,47 @@ import MemoLinkedin from "public/assets/icons/Linkedin";
 const foundersData = [
   {
     id: 0,
-    src: "/images/tems/anuj-pratap-singh.jpg",
+    src: "/images/tems/anuj-pratap-singh.webp",
     alt: "anuj-pratap-singh",
     name: "Anuj Pratap Singh",
     title: "Project Manager",
   },
   {
     id: 1,
-    src: "/images/tems/shrey-saxena.jpg",
+    src: "/images/tems/shrey-saxena.webp",
     alt: "shrey-saxena",
     name: "Shrey Saxena",
     title: "Technical Evangelist",
   },
+
   {
     id: 2,
-    src: "/images/tems/shrey-saxena.jpg",
-    alt: "shrey-saxena",
-    name: "Shrey Saxena",
-    title: "Technical Evangelist",
+    src: "/images/tems/laya-yesodharan.webp",
+    alt: "laya-yesodharan",
+    name: "Laya Yesodharan",
+    title: "Sr. Client Partner",
   },
   {
     id: 3,
-    src: "/images/tems/anuj-pratap-singh.jpg",
-    alt: "anuj-pratap-singh",
-    name: "Anuj Pratap Singh",
+    src: "/images/tems/shivi-johri.webp",
+    alt: "shivi-johri",
+    name: "Shivi Johri",
     title: "Project Manager",
   },
+
   {
     id: 4,
-    src: "/images/tems/anuj-pratap-singh.jpg",
-    alt: "anuj-pratap-singh",
-    name: "Anuj Pratap Singh",
-    title: "Project Manager",
+    src: "/images/tems/jayanti-rai.webp",
+    alt: "jayanti-rai",
+    name: "Jayanti Rai",
+    title: "Solution Architect",
   },
   {
     id: 5,
-    src: "/images/tems/anuj-pratap-singh.jpg",
-    alt: "anuj-pratap-singh",
-    name: "Anuj Pratap Singh",
-    title: "Project Manager",
+    src: "/images/tems/abhimanyu-yadav.webp",
+    alt: "abhimanyu-yada",
+    name: "Abhimanyu Yadav",
+    title: "Sr. Developer",
   },
 ];
 
@@ -56,7 +58,7 @@ export const OurTeams = () => {
           xs: "4rem 2.4rem",
           md: "5rem 4rem",
           xm: "5rem 6rem",
-          lg: "10rem 16rem",
+          lg: "10rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
       >

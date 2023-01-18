@@ -25,7 +25,7 @@ export const BestInMarket = () => {
         xs: "4rem 2.4rem",
         md: "5rem 4rem",
         xm: "5rem 6rem",
-        lg: "6rem 16rem",
+        lg: "6rem 12rem",
       }}
       maxWidth={{ lg: "100%", xl: "144rem" }}
     >
@@ -43,9 +43,9 @@ Under H1 Roadmap venture is focusing on Organisation’s current problem and add
           />
         </Box>
 
-        <Box width="50rem" height="32.5rem">
+        <Box width="50rem" height="32.5rem" className="image-30">
           <Image
-            src="/images/about-page-1.jpg"
+            src="/images/about-page-1.webp"
             alt="about-page-1"
             quality={100}
             objectFit="contain"

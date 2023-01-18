@@ -50,6 +50,13 @@ a {
 .image-15 img {
   border-radius: 15px;
  }
+ .image-50 img {
+  border-radius: 50px;
+ }
+
+ .image-30 img {
+  border-radius: 30px;
+ }
 
 .player-wrapper {
   position: relative;

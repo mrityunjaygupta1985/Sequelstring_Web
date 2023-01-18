@@ -2,6 +2,10 @@ import React from "react";
 import Link from "next/link";
 import { Box, Flex, Grid, Text } from "atoms";
 import Image from "next/image";
+import MemoPhone from "public/assets/icons/Phone";
+import MemoMail from "public/assets/icons/Mail";
+import MemoLinkedin from "public/assets/icons/Linkedin";
+import MemoTwitter from "public/assets/icons/Twitter";
 
 export const Footer = () => {
   return (
@@ -9,7 +13,7 @@ export const Footer = () => {
       // pt={{ xs: "2rem" }}
       zIndex={2}
       bg="secondary.600"
-      px="16rem"
+      px="12rem"
       pt="4rem"
       // backgroundImage="linear-gradient(98.94deg, #4275FA -23.73%, rgba(17, 2, 198, 0.87) 118.38%);"
     >
@@ -34,28 +38,98 @@ export const Footer = () => {
           </Box>
           <Text
             mt="2rem"
-            fontSize="1.8rem"
+            fontSize={{ xs: "1.6rem", lg: "1.8rem" }}
+            fontWeight="500"
+            color="white"
+          >
+            Head Office, Mumbai
+          </Text>
+          <Text
+            mt=".5rem"
+            fontSize={{ xs: "1.6rem", lg: "1.8rem" }}
             fontWeight="500"
             color="rgb(255, 255, 255, .7)"
           >
             R&D Innovation Lab
           </Text>
-          <Text fontSize="1.8rem" color="rgb(255, 255, 255, .7)">
+          <Text
+            fontSize={{ xs: "1.6rem", lg: "1.8rem" }}
+            color="rgb(255, 255, 255, .7)"
+          >
             Don Bosco Institute Of Technology <br />
             Premier Automobiles Road Opp. HDIL Premier Exotica, Kurla, w,
             Maharashtra 400070
           </Text>
+
+          <Link href="tel:+91-8448447751">
+            <a>
+              <Grid
+                gridTemplateColumns="4rem 1fr"
+                mt="2rem"
+                alignItems="center"
+                cursor="pointer"
+              >
+                <Box color="primary.1800">
+                  <MemoPhone width="2rem" height="2rem" />
+                </Box>
+                <Text
+                  fontSize={{ xs: "1.6rem", lg: "1.8rem" }}
+                  lineHeight={{ xs: "2.4rem", md: "2.8rem" }}
+                  color="rgb(255, 255, 255, .7)"
+                  _hover={{ color: "rgb(255, 255, 255, 1)" }}
+                >
+                  +91-8448447751
+                </Text>
+              </Grid>
+            </a>
+          </Link>
+
+          <Link href="mailto:info@sequelstring.com">
+            <a>
+              <Grid
+                gridTemplateColumns="4rem 1fr"
+                mt="1.5rem"
+                alignItems="center"
+                cursor="pointer"
+              >
+                <Box color="primary.1800">
+                  <MemoMail width="2.3rem" height="1.8rem" />
+                </Box>
+                <Text
+                  fontSize={{ xs: "1.6rem", lg: "1.8rem" }}
+                  color="rgb(255, 255, 255, .7)"
+                  lineHeight={{ xs: "2.4rem", md: "2.8rem" }}
+                  _hover={{ color: "rgb(255, 255, 255, 1)" }}
+                >
+                  info@sequelstring.com
+                </Text>
+              </Grid>
+            </a>
+          </Link>
+          <Flex mt="2rem" alignItems="center ">
+            <Box
+              color="rgb(255, 255, 255, .7)"
+              _hover={{ color: "rgb(255, 255, 255, 1)" }}
+            >
+              <MemoLinkedin width="3rem" height="3rem" cursor="pointer" />
+            </Box>
+            <Box
+              color="rgb(255, 255, 255, .7)"
+              ml="3rem"
+              _hover={{ color: "rgb(255, 255, 255, 1)" }}
+            >
+              <MemoTwitter width="3rem" height="3rem" cursor="pointer" />
+            </Box>
+          </Flex>
         </Box>
+
         <Box>
           <Text
-            // color="rgb(152, 152, 152, .5)"
-            color="white"
             fontSize="1.8rem"
             fontWeight="500"
             cursor="pointer"
-            _hover={{
-              color: "rgb(255, 255, 255, 0.7)",
-            }}
+            color="rgb(255, 255, 255, .7)"
+            _hover={{ color: "rgb(255, 255, 255, 1)" }}
           >
             Home
           </Text>
@@ -63,26 +137,22 @@ export const Footer = () => {
 
         <Box>
           <Text
-            color="white"
             fontSize="1.8rem"
             fontWeight="500"
             cursor="pointer"
-            _hover={{
-              color: "rgb(255, 255, 255, 0.7)",
-            }}
+            color="rgb(255, 255, 255, .7)"
+            _hover={{ color: "rgb(255, 255, 255, 1)" }}
           >
             About Us
           </Text>
         </Box>
         <Box>
           <Text
-            color="white"
             fontSize="1.8rem"
             fontWeight="500"
             cursor="pointer"
-            _hover={{
-              color: "rgb(255, 255, 255, 0.7)",
-            }}
+            color="rgb(255, 255, 255, .7)"
+            _hover={{ color: "rgb(255, 255, 255, 1)" }}
           >
             Contact Us
           </Text>
