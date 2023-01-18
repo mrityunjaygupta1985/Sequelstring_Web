@@ -2,20 +2,6 @@ import React from "react";
 import { Grid, Box, Flex, Text, Heading, Description, SubHeading } from "atoms";
 import Image from "next/image";
 
-const dataImpact = [
-  { title: "85%", stitle: "Reduction", text: "In Human-Agent Requirement" },
-  { title: "90%", stitle: "Increase", text: "In Customer Engagement 24X7" },
-  {
-    title: "5x",
-    stitle: "Advanced",
-    text: "Automated Lead Verification & Qualification",
-  },
-  {
-    title: "300%",
-    stitle: "Advance",
-    text: "In Unified Customer Digital Experience",
-  },
-];
 
 export const RpaFinance = () => {
   return (
@@ -25,16 +11,10 @@ export const RpaFinance = () => {
         xs: "4rem 2.4rem",
         md: "5rem 4rem",
         xm: "5rem 6rem",
-        lg: "6rem 16rem",
+        lg: "6rem 12rem",
       }}
       maxWidth={{ lg: "100%", xl: "144rem" }}
     >
-      <Heading
-        textAlign="center"
-        Heading="Can RPA help Finance and Accounting?"
-      />
-      <Heading textAlign="center" Heading="Yes!" />
-
       <Grid
         mt="4rem"
         alignItems="center"
@@ -43,7 +23,7 @@ export const RpaFinance = () => {
       >
         <Box height="26.9rem" width="39rem">
           <Image
-            src="/images/finance-1.png"
+            src="/images/finance-1.webp"
             alt="finance-1"
             quality={100}
             objectFit="contain"
@@ -52,6 +32,10 @@ export const RpaFinance = () => {
           />
         </Box>
         <Box>
+          <Heading
+            mb="2rem"
+            Heading="Can RPA help Finance and Accounting? Yes!"
+          />
           <Description
             mb="1.5rem"
             Description="Automation can empower finance and accounting business units to be more efficient, streamline high-touch processes, and boost employee satisfaction."

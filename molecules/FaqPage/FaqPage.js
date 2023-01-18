@@ -71,7 +71,7 @@ export const FaqPage = () => {
           xs: "4rem 2.4rem",
           md: "5rem 4rem",
           xm: "6rem 6rem",
-          lg: "8rem 16rem",
+          lg: "8rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
       >

@@ -100,10 +100,10 @@ export const ContactInfo = () => {
           </Box>
         </Grid>
         <Flex mt={{ xs: "3rem", xm: "5rem" }} alignItems="center ">
-          <Box color="white">
+          <Box color="white" _hover={{ opacity: 0.8 }}>
             <MemoLinkedin width="3rem" height="3rem" cursor="pointer" />
           </Box>
-          <Box color="white" ml="3rem">
+          <Box color="white" ml="3rem" _hover={{ opacity: 0.8 }}>
             <MemoTwitter width="3rem" height="3rem" cursor="pointer" />
           </Box>
         </Flex>

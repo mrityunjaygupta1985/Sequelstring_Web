@@ -210,7 +210,7 @@ export const HeroSection = () => {
           xs: "4rem 2.4rem",
           md: "5rem 4rem",
           xm: "5rem 6rem",
-          lg: "6rem 16rem",
+          lg: "6rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
       >
@@ -256,7 +256,23 @@ export const HeroSection = () => {
           </Flex>
 
           <Box order={{ xs: 1, md: 0 }}>
-            <BoxStyleSecond
+            <Box
+              width={{ xs: "25rem", lg: "45rem" }}
+              height={{ xs: "25rem", lg: "45rem" }}
+              className="image-50"
+            >
+              <Image
+                src="/images/robot-2.gif"
+                alt="robot-2"
+                quality={100}
+                width={450}
+                height={450}
+                // layout="fill"
+                objectFit="contain"
+              />
+            </Box>
+
+            {/* <BoxStyleSecond
               mx={{ xs: "auto", lg: "unset" }}
               width={{
                 xs: "18rem",
@@ -274,13 +290,12 @@ export const HeroSection = () => {
               <Player
                 autoplay
                 loop
-                src="/images/robot-2.json"
-                // style={{ width: 510, height: 510 }}
+                src="/images/robot-2.json"                
                 objectfit="contain"
               >
                 <Controls visible={false} />
               </Player>
-            </BoxStyleSecond>
+            </BoxStyleSecond> */}
           </Box>
 
           <Box>

@@ -107,7 +107,7 @@ export const RequestDemo = () => {
           xs: "4rem 2.4rem",
           md: "5rem 4rem",
           xm: "5rem 6rem",
-          lg: "5rem 16rem",
+          lg: "5rem 12rem",
         }}
       >
         <Formik

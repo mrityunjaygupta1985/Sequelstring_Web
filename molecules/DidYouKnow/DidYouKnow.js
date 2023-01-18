@@ -10,9 +10,9 @@ export const DidYouKnow = () => {
         xs: "4rem 2.4rem",
         md: "5rem 4rem",
         xm: "5rem 6rem",
-        lg: "6rem 16rem",
+        lg: "6rem 12rem",
       }}
-      my="8rem"
+      mt="8rem"
       bg="primary.2400"
       maxWidth={{ lg: "100%", xl: "144rem" }}
     >
@@ -70,9 +70,9 @@ export const DidYouKnow = () => {
           /> */}
         </Box>
         <Flex justifyContent="end">
-          <Box width="50rem" height="42.6rem">
+          <Box width="50rem" height="42.6rem" className="image-30">
             <Image
-              src="/images/home-2.jpg"
+              src="/images/home-2.webp"
               alt="home-1"
               quality={100}
               width={500}
@@ -91,7 +91,7 @@ export const DidYouKnow = () => {
         alignItems="center"
       >
         <Flex justifyContent="start">
-          <Box width="55rem" height="31.1rem">
+          <Box width="55rem" height="31.1rem" className="image-30">
             <Image
               src="/images/home-1.webp"
               alt="home-1"

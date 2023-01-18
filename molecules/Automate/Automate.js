@@ -56,13 +56,10 @@ export const Automate = () => {
         xs: "4rem 2.4rem",
         md: "5rem 4rem",
         xm: "5rem 6rem",
-        lg: "6rem 16rem",
+        lg: "6rem 12rem",
       }}
       maxWidth={{ lg: "100%", xl: "144rem" }}
     >
-      <Heading textAlign="center" Heading="What can be automated?" />
-      <Heading textAlign="center" Heading="A lot!" />
-
       <Grid
         mt="4rem"
         alignItems="center"
@@ -71,6 +68,7 @@ export const Automate = () => {
         justifyItems="end"
       >
         <Box>
+          <Heading mb="2rem" Heading="What can be automated? A lot!" />
           <Description
             mb="1.5rem"
             Description="There are key areas of opportunity for automation inside finance and accounting. From customer onboarding and invoicing, to cash application, to logistics management to invoice processing, to payments processing."
@@ -80,7 +78,7 @@ export const Automate = () => {
 
         <Box height="22.2rem" width="37.2rem">
           <Image
-            src="/images/finance-2.png"
+            src="/images/finance-2.webp"
             alt="finance-2"
             quality={100}
             objectFit="contain"

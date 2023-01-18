@@ -1,7 +1,29 @@
 import React from "react";
 import { Grid, Box, Description, SubHeading } from "atoms";
 import Image from "next/image";
+import { Controls, Player } from "@lottiefiles/react-lottie-player";
+import styled from "styled-components";
 
+const BoxStyleSecond = styled(Box)`
+  @media only screen and (max-width: 600px) {
+    svg {
+      width: 18rem !important;
+      height: 18rem !important;
+    }
+  }
+  @media only screen and (min-device-width: 601px) and (max-device-width: 800px) {
+    svg {
+      width: 22rem !important;
+      height: 22rem !important;
+    }
+  }
+  @media only screen and (min-device-width: 800px) and (max-device-width: 1024px) {
+    svg {
+      width: 30rem !important;
+      height: 30rem !important;
+    }
+  }
+`;
 export const OurMission = () => {
   return (
     <>
@@ -10,7 +32,7 @@ export const OurMission = () => {
           xs: "4rem 2.4rem",
           md: "5rem 4rem",
           xm: "5rem 6rem",
-          lg: "10rem 16rem",
+          lg: "10rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
       >
@@ -31,9 +53,10 @@ export const OurMission = () => {
               width={{ xs: "100%", lg: "100%" }}
               height={{ xs: "20rem", lg: "25rem" }}
               //   className="image-15"
+              className="image-30"
             >
               <Image
-                src="/images/mission-1.png"
+                src="/images/mission-1.webp"
                 alt="mission"
                 quality={100}
                 layout="fill"
@@ -52,9 +75,10 @@ export const OurMission = () => {
             <Box
               width={{ xs: "100%", lg: "100%" }}
               height={{ xs: "20rem", lg: "25rem" }}
+              className="image-30"
             >
               <Image
-                src="/images/vision-1.png"
+                src="/images/vision-1.webp"
                 alt="vision"
                 quality={100}
                 // width={200}
@@ -91,9 +115,10 @@ export const OurMission = () => {
             <Box
               width={{ xs: "100%", lg: "100%" }}
               height={{ xs: "20rem", lg: "25rem" }}
+              className="image-30"
             >
               <Image
-                src="/images/value-1.png"
+                src="/images/value-1.webp"
                 alt="value"
                 quality={100}
                 // width={200}
@@ -111,19 +136,47 @@ export const OurMission = () => {
           alignItems="center"
           mt="5rem"
         >
-          <Box>
+          <Box bg="primary.2400" borderRadius="3rem">
+            <BoxStyleSecond
+              mx="auto"
+              width={{
+                xs: "18rem",
+                md: "22rem",
+                xm: "30rem",
+                lg: "40rem",
+              }}
+              height={{
+                xs: "18rem",
+                md: "22rem",
+                xm: "30rem",
+                lg: "40rem",
+              }}
+            >
+              <Player
+                autoplay
+                loop
+                src="/images/goal-1.json"
+                // style={{ width: 510, height: 510 }}
+                objectfit="contain"
+              >
+                <Controls visible={false} />
+              </Player>
+            </BoxStyleSecond>
+          </Box>
+
+          {/* <Box>
             <Box width="50rem" height="46.1rem">
               <Image
                 src="/images/goal-1.png"
-                alt="value"
+                alt="goal-1"
                 quality={100}
                 width={500}
                 height={461}
-                // layout="fill"
+                layout="fill"
                 objectFit="contain"
               />
             </Box>
-          </Box>
+          </Box> */}
 
           <Box>
             <SubHeading SubHeading="GOAL" />
@@ -153,6 +206,7 @@ export const OurMission = () => {
               width={{ xs: "100%", lg: "100%" }}
               height={{ xs: "20rem", lg: "35rem" }}
               bg="primary.2400"
+              borderRadius="3rem"
             >
               <Image
                 src="/images/platform.gif"
