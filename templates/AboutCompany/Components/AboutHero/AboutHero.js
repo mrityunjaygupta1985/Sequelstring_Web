@@ -20,7 +20,7 @@ export const AboutHero = () => {
         >
           <Heading
             textAlign="center"
-            fontSize={{ lg: "4.8rem" }}
+            fontSize={{ xs: "2.8rem", md: "3.8rem", lg: "4.8rem" }}
             mb="1.5rem"
             Heading="About Us"
           />

@@ -82,7 +82,7 @@ export const OurTestimonial = () => {
         <SubHeading
           textAlign="center"
           mb="4rem"
-          SubHeading="Lorem ipsum dolor sit amet"
+          SubHeading="Satisfied Customers Share Their Experience"
         />
         <Grid
           //   gridTemplateColumns="repeat(3, 49.3rem)"

@@ -55,20 +55,27 @@ export const OurTeams = () => {
     <>
       <Box
         m={{
-          xs: "4rem 2.4rem",
+          xs: "0rem",
           md: "5rem 4rem",
           xm: "5rem 6rem",
           lg: "10rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
       >
-        <SubHeading textAlign="center" mb="4rem" SubHeading="Meet Our Team" />
+        <SubHeading
+          textAlign="center"
+          mb={{ xs: "2rem", md: "4rem" }}
+          mt={{ xs: "4rem", md: "unset" }}
+          SubHeading="Meet Our Team"
+        />
         <Box
           display={{ xs: "grid", xm: "flex" }}
           flexWrap="wrap"
-          justifyContent="center"
-          gridTemplateColumns="repeat(4, 1fr)"
+          justifyContent={{ xs: "left", md: "center" }}
+          gridTemplateColumns={{ xs: "repeat(6, 1fr)", md: "repeat(4, 1fr)" }}
           gridGap={{ xs: "2rem", lg: "3.5rem" }}
+          overflowX={{ xs: "auto", md: "unset" }}
+          p={{ xs: "2.4rem", md: "unset" }}
         >
           {foundersData.map((items, index) => {
             return (
@@ -89,7 +96,11 @@ export const OurTeams = () => {
                     />
                   </Box>
                 </Flex>
-                <Text mt="1.5rem" fontWeight="700" fontSize="2.2rem">
+                <Text
+                  mt="1.5rem"
+                  fontWeight="700"
+                  fontSize={{ xs: "2rem", md: "2.2rem" }}
+                >
                   {items?.name}
                 </Text>
                 <Description

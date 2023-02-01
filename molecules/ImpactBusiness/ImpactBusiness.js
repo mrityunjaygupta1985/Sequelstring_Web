@@ -22,7 +22,7 @@ export const ImpactBusiness = () => {
     <Box
       as="section"
       m={{
-        xs: "4rem 2.4rem",
+        xs: "5rem 2.4rem",
         md: "5rem 4rem",
         xm: "5rem 6rem",
         lg: "6rem 12rem",
@@ -37,7 +37,11 @@ export const ImpactBusiness = () => {
 
       <Grid
         mt="4rem"
-        gridTemplateColumns="2rem 1fr 1fr 1fr 1fr 2rem"
+        gridTemplateColumns={{
+          md: "1fr 1fr",
+          xm: "1fr 1fr 1fr 1fr",
+          lg: "2rem 1fr 1fr 1fr 1fr 2rem",
+        }}
         gridColumnGap="3rem"
       >
         <Box />
@@ -46,7 +50,7 @@ export const ImpactBusiness = () => {
             <Box key={index}>
               <Text
                 textAlign="center"
-                fontSize="5rem"
+                fontSize={{ xs: "3rem", md: "4rem", lg: "5rem" }}
                 fontWeight="700"
                 color="primary.1800"
               >
@@ -54,14 +58,18 @@ export const ImpactBusiness = () => {
               </Text>
               <Text
                 textAlign="center"
-                fontSize="2.2rem"
+                fontSize={{ xs: "2rem", lg: "2.2rem" }}
                 fontWeight="700"
                 mb="1rem"
                 color="primary.1800"
               >
                 {items?.stitle}
               </Text>
-              <Description textAlign="center" Description={items?.text} />
+              <Description
+                mb={{ xs: "2rem", xm: "unset" }}
+                textAlign="center"
+                Description={items?.text}
+              />
             </Box>
           );
         })}

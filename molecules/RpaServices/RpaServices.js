@@ -29,7 +29,7 @@ const BoxStyleSecond = styled(Box)`
 const dataImpact = [
   {
     src: "/images/RPA-Services.json",
-    SubHeading: "RPA Services",
+    SubHeading: "Intelligent Automation",
     Description: "In Intelligent Automation",
   },
   {
@@ -57,7 +57,11 @@ export const RpaServices = () => {
       }}
       maxWidth={{ lg: "100%", xl: "144rem" }}
     >
-      <Grid mt="8rem" gridTemplateColumns="repeat(3, 1fr)" gridColumnGap="3rem">
+      <Grid
+        mt={{ xs: "2rem", md: "5rem", lg: "8rem" }}
+        gridTemplateColumns={{ md: "repeat(3, 1fr)" }}
+        gridGap="3rem"
+      >
         {dataImpact.map((items, index) => {
           return (
             <Box

@@ -45,8 +45,8 @@ import { RpaServices } from "molecules/RpaServices";
 const BoxStyleFirst = styled(Box)`
   @media only screen and (max-width: 600px) {
     svg {
-      width: 18rem !important;
-      height: 18rem !important;
+      width: 28rem !important;
+      height: 28rem !important;
     }
   }
   @media only screen and (min-device-width: 601px) and (max-device-width: 800px) {
@@ -100,7 +100,7 @@ export const HeroSection = () => {
   return (
     <>
       {/* banner section */}
-      <Box mx="8rem">
+      <Box mx={{ xs: "0rem", lg: "8rem" }}>
         <Heading
           textAlign="center"
           color="primary.1800"
@@ -216,28 +216,54 @@ export const HeroSection = () => {
       >
         <Grid
           gridTemplateColumns={{ md: "1fr 1fr" }}
-          gridGap="3.4rem"
+          gridGap={{ xs: "2rem", md: "3.4rem" }}
           alignItems="center"
         >
-          <Box>
-            <Heading Heading="The leader in automation software" />
-            {/* <Description
-              mt="1.5rem"
-              Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            /> */}
+          <Box order={{ xs: 1, md: 0 }}>
+            {/* <Heading Heading="The leader in automation software" /> */}
+            <Description
+              mb="1rem"
+              fontWeight="500"
+              Description="Reduced Cost"
+            />
+            <Description
+              mb="1rem"
+              fontWeight="500"
+              Description="Compliance with Legal & Regulatory Requirements"
+            />
+            <Description
+              mb="1rem"
+              fontWeight="500"
+              Description="Reduced Carbon Foot Print"
+            />
+            <Description
+              mb="1rem"
+              fontWeight="500"
+              Description="Security & Scalability"
+            />
+            <Description
+              mb="1rem"
+              fontWeight="500"
+              Description="Reducing the Chances of Fraud"
+            />
+            <Description
+              mb="1rem"
+              fontWeight="500"
+              Description="Advanced Governance"
+            />
           </Box>
 
           <Flex justifyContent="end">
             <BoxStyleFirst
               mx={{ xs: "auto", md: "unset" }}
               width={{
-                xs: "18rem",
+                xs: "28rem",
                 md: "22rem",
                 xm: "30rem",
                 lg: "51rem",
               }}
               height={{
-                xs: "18rem",
+                xs: "28rem",
                 md: "22rem",
                 xm: "30rem",
                 lg: "43rem",
@@ -254,11 +280,21 @@ export const HeroSection = () => {
               </Player>
             </BoxStyleFirst>
           </Flex>
+        </Grid>
 
-          <Box order={{ xs: 1, md: 0 }}>
+        <Grid
+          gridTemplateColumns={{ md: "1fr 1fr" }}
+          gridGap={{ xs: "3rem", md: "3.4rem" }}
+          alignItems="center"
+          mt={{ xs: "3rem", xm: "3.4rem" }}
+        >
+          <Flex
+            alignItems={{ xs: "center", xm: "left" }}
+            flexDirection={{ xs: "column", xm: "unset" }}
+          >
             <Box
-              width={{ xs: "25rem", lg: "45rem" }}
-              height={{ xs: "25rem", lg: "45rem" }}
+              width={{ xs: "28rem", lg: "45rem" }}
+              height={{ xs: "28rem", lg: "45rem" }}
               className="image-50"
             >
               <Image
@@ -296,14 +332,35 @@ export const HeroSection = () => {
                 <Controls visible={false} />
               </Player>
             </BoxStyleSecond> */}
-          </Box>
+          </Flex>
 
           <Box>
             {/* order={{ xs: 1, lg: 0 }} */}
-            <Heading Heading="Lorem ipsum dolor sit amet, consectetur" />
+            {/* <Heading Heading="Lorem ipsum dolor sit amet, consectetur" /> */}
             <Description
-              mt="1.5rem"
-              Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              mb="1rem"
+              fontWeight="500"
+              Description="Better Record Keeping"
+            />
+            <Description
+              mb="1rem"
+              fontWeight="500"
+              Description="Productivity & Operational Efficiency"
+            />
+            <Description
+              mb="1rem"
+              fontWeight="500"
+              Description="Reduced Workload"
+            />
+            <Description
+              mb="1rem"
+              fontWeight="500"
+              Description="Increased Quality & Data Analysis"
+            />
+            <Description
+              mb="1rem"
+              fontWeight="500"
+              Description="Speed & Accuracy"
             />
           </Box>
         </Grid>

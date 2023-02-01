@@ -134,7 +134,11 @@ export const OurWorkingEnvironment = () => {
       }}
       maxWidth={{ lg: "100%", xl: "144rem" }}
     >
-      <Heading textAlign="center" mb="2rem" Heading="Our Working Environment" />
+      <Heading
+        textAlign="center"
+        mb="2rem"
+        Heading="Building a Positive Workplace"
+      />
 
       <Slider {...settings}>
         {teamData.map((items, index) => {

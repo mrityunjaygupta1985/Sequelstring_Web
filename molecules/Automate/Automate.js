@@ -63,9 +63,9 @@ export const Automate = () => {
       <Grid
         mt="4rem"
         alignItems="center"
-        gridTemplateColumns="1.5fr 1fr"
-        gridColumnGap="3rem"
-        justifyItems="end"
+        gridTemplateColumns={{ xm: "2fr 1fr" }}
+        gridGap="3rem"
+        justifyItems={{ xs: "center", xm: "end" }}
       >
         <Box>
           <Heading mb="2rem" Heading="What can be automated? A lot!" />
@@ -76,7 +76,10 @@ export const Automate = () => {
           <Description Description="Nearly any process can benefit from automation inside finance and accounting. In the next page, you will discover process heatmaps that highlight where automation has the biggest potential across the business unit." />
         </Box>
 
-        <Box height="22.2rem" width="37.2rem">
+        <Box
+          height={{ xs: "16.2rem", xm: "22.2rem" }}
+          width={{ xs: "27rem", xm: "37.2rem" }}
+        >
           <Image
             src="/images/finance-2.webp"
             alt="finance-2"

@@ -60,7 +60,7 @@ export const OurQuestions = () => {
         maxWidth={{ lg: "100%", xl: "144rem" }}
       >
         <Grid
-          gridTemplateColumns="1fr 2fr"
+          gridTemplateColumns={{ md: "1fr 2fr" }}
           bg="primary.1800"
           borderRadius="1.5rem"
           gridGap="4rem"
@@ -82,7 +82,7 @@ export const OurQuestions = () => {
             />
           </Box>
 
-          <Grid gridTemplateColumns="1fr 1fr 1fr" gridGap="2.5rem">
+          <Grid gridTemplateColumns={{ md: "1fr 1fr 1fr" }} gridGap="2.5rem">
             {quesData.map((items, index) => {
               return (
                 <Box key={index} bg="white" p="2rem" borderRadius=".8rem">
@@ -100,7 +100,7 @@ export const OurQuestions = () => {
                   <Link href={items?.href}>
                     <a>
                       <Button
-                        mt="1rem"
+                        mt={{ xs: "3rem", md: "1rem" }}
                         variant="blue"
                         width={{ xs: "100%", lg: "100%" }}
                       >

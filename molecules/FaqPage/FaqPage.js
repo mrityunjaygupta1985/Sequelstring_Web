@@ -77,10 +77,13 @@ export const FaqPage = () => {
       >
         <Heading
           textAlign="center"
-          mb="5rem"
+          mb={{ xs: "3rem", md: "5rem" }}
           Heading="Frequently Asked Questions"
         />
-        <Grid gridTemplateColumns="1fr 2.5fr" gridGap="8rem">
+        <Grid
+          gridTemplateColumns={{ md: "1fr 2.5fr" }}
+          gridGap={{ xs: "2rem", md: "4rem", lg: "8rem" }}
+        >
           <Box>
             <BoxStyleFirst
               mx="auto"
@@ -114,7 +117,7 @@ export const FaqPage = () => {
                   >
                     <Box
                       fontWeight="500"
-                      fontSize={{ xs: "1.6rem", md: "2rem", lg: "2.2rem" }}
+                      fontSize={{ xs: "2rem", lg: "2.2rem" }}
                     >
                       {items?.title}
                     </Box>
