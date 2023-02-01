@@ -239,18 +239,57 @@ const FactsData = [
 ];
 
 const didData = [
-  { id: 1, url: "/images/did-imge/Dolomites_5.png", alt: "Dolomites_5" },
-  { id: 2, url: "/images/did-imge/Dolomites_6.png", alt: "Dolomites_5" },
-  { id: 3, url: "/images/did-imge/Dolomites_7.png", alt: "Dolomites_5" },
-  { id: 4, url: "/images/did-imge/Dolomites_8.png", alt: "Dolomites_5" },
-  { id: 5, url: "/images/did-imge/Dolomites_9.png", alt: "Dolomites_5" },
-  { id: 6, url: "/images/did-imge/Dolomites_18.png", alt: "Dolomites_5" },
-  { id: 7, url: "/images/did-imge/Dolomites_19.png", alt: "Dolomites_5" },
-  { id: 8, url: "/images/did-imge/Dolomites_21.png", alt: "Dolomites_5" },
-  { id: 9, url: "/images/did-imge/Dolomites_22.png", alt: "Dolomites_5" },
-  { id: 10, url: "/images/did-imge/Dolomites_23.png", alt: "Dolomites_5" },
-  { id: 11, url: "/images/did-imge/Dolomites_24.png", alt: "Dolomites_5" },
-  { id: 12, url: "/images/did-imge/Dolomites_25.png", alt: "Dolomites_5" },
+  { id: 1, url: "/images/did-imge/Dolomites_5.webp", alt: "Dolomites_5" },
+  { id: 2, url: "/images/did-imge/Dolomites_6.webp", alt: "Dolomites_5" },
+  { id: 3, url: "/images/did-imge/Dolomites_7.webp", alt: "Dolomites_5" },
+  { id: 4, url: "/images/did-imge/Dolomites_8.webp", alt: "Dolomites_5" },
+  { id: 5, url: "/images/did-imge/Dolomites_9.webp", alt: "Dolomites_5" },
+  { id: 6, url: "/images/did-imge/Dolomites_18.webp", alt: "Dolomites_5" },
+  { id: 7, url: "/images/did-imge/Dolomites_19.webp", alt: "Dolomites_5" },
+  { id: 8, url: "/images/did-imge/Dolomites_21.webp", alt: "Dolomites_5" },
+  { id: 9, url: "/images/did-imge/Dolomites_22.webp", alt: "Dolomites_5" },
+  { id: 10, url: "/images/did-imge/Dolomites_23.webp", alt: "Dolomites_5" },
+  { id: 11, url: "/images/did-imge/Dolomites_24.webp", alt: "Dolomites_5" },
+  { id: 12, url: "/images/did-imge/Dolomites_25.webp", alt: "Dolomites_5" },
+  { id: 13, url: "/images/did-imge/Dolomites_26.webp", alt: "Dolomites_5" },
+  { id: 14, url: "/images/did-imge/Dolomites_27.webp", alt: "Dolomites_5" },
+  { id: 14, url: "/images/did-imge/Dolomites_28.webp", alt: "Dolomites_5" },
+  { id: 16, url: "/images/did-imge/Dolomites_29.webp", alt: "Dolomites_5" },
+  { id: 17, url: "/images/did-imge/Dolomites_31.webp", alt: "Dolomites_5" },
+  { id: 17, url: "/images/did-imge/Dolomites_34.webp", alt: "Dolomites_5" },
+  { id: 19, url: "/images/did-imge/Dolomites_36.webp", alt: "Dolomites_5" },
+  { id: 20, url: "/images/did-imge/Dolomites_37.webp", alt: "Dolomites_5" },
+  { id: 21, url: "/images/did-imge/Dolomites_38.webp", alt: "Dolomites_5" },
+  { id: 22, url: "/images/did-imge/Dolomites_39.webp", alt: "Dolomites_5" },
+  { id: 23, url: "/images/did-imge/Dolomites_40.webp", alt: "Dolomites_5" },
+  { id: 24, url: "/images/did-imge/Dolomites_41.webp", alt: "Dolomites_5" },
+  { id: 25, url: "/images/did-imge/Dolomites_42.webp", alt: "Dolomites_5" },
+  { id: 26, url: "/images/did-imge/Dolomites_43.webp", alt: "Dolomites_5" },
+  { id: 27, url: "/images/did-imge/Dolomites_44.webp", alt: "Dolomites_5" },
+  { id: 28, url: "/images/did-imge/Dolomites_45.webp", alt: "Dolomites_5" },
+  { id: 29, url: "/images/did-imge/Dolomites_46.webp", alt: "Dolomites_5" },
+  { id: 30, url: "/images/did-imge/Dolomites_47.webp", alt: "Dolomites_5" },
+  { id: 31, url: "/images/did-imge/Dolomites_48.webp", alt: "Dolomites_5" },
+  { id: 32, url: "/images/did-imge/Dolomites_50.webp", alt: "Dolomites_5" },
+  { id: 33, url: "/images/did-imge/Dolomites_51.webp", alt: "Dolomites_5" },
+  { id: 34, url: "/images/did-imge/Dolomites_52.webp", alt: "Dolomites_5" },
+  { id: 35, url: "/images/did-imge/Dolomites_53.webp", alt: "Dolomites_5" },
+  { id: 36, url: "/images/did-imge/Dolomites_55.webp", alt: "Dolomites_5" },
+  { id: 37, url: "/images/did-imge/Dolomites_56.webp", alt: "Dolomites_5" },
+  { id: 38, url: "/images/did-imge/Dolomites_58.webp", alt: "Dolomites_5" },
+  { id: 39, url: "/images/did-imge/Dolomites_59.webp", alt: "Dolomites_5" },
+  { id: 40, url: "/images/did-imge/Dolomites_60.webp", alt: "Dolomites_5" },
+  { id: 41, url: "/images/did-imge/Dolomites_61.webp", alt: "Dolomites_5" },
+  { id: 42, url: "/images/did-imge/Dolomites_62.webp", alt: "Dolomites_5" },
+  { id: 43, url: "/images/did-imge/Dolomites_64.webp", alt: "Dolomites_5" },
+  { id: 44, url: "/images/did-imge/Dolomites_65.webp", alt: "Dolomites_5" },
+  { id: 45, url: "/images/did-imge/Dolomites_68.webp", alt: "Dolomites_5" },
+  { id: 46, url: "/images/did-imge/Dolomites_71.webp", alt: "Dolomites_5" },
+  { id: 47, url: "/images/did-imge/Dolomites_72.webp", alt: "Dolomites_5" },
+  { id: 48, url: "/images/did-imge/Dolomites_73.webp", alt: "Dolomites_5" },
+  { id: 49, url: "/images/did-imge/Dolomites_74.webp", alt: "Dolomites_5" },
+  { id: 50, url: "/images/did-imge/Dolomites_75.webp", alt: "Dolomites_5" },
+  { id: 51, url: "/images/did-imge/Dolomites_76.webp", alt: "Dolomites_5" },
 ];
 
 export const DidYouKnow = () => {
@@ -341,15 +380,19 @@ export const DidYouKnow = () => {
             return (
               <Box
                 key={index}
-                width={{ xs: "16rem", xm: "20rem" }}
-                height={{ xs: "40rem", xm: "50rem" }}
+                width={{ xs: "18rem", xm: "23rem" }}
+                height={{ xs: "33.5rem", xm: "42.6rem" }}
+                border=".2rem solid"
+                borderColor="primary.1800"
+                borderRadius="1.5rem"
+                className="image-15"
               >
                 <Image
                   src={items?.url}
                   alt={items?.alt}
                   quality={100}
-                  width={200}
-                  height={500}
+                  width={230}
+                  height={428}
                   objectFit="contain"
                 />
               </Box>
