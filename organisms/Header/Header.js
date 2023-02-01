@@ -218,11 +218,18 @@ export const Header = () => {
             mx={{ xs: "3rem", md: "7rem", lg: "unset" }}
             display={{ xs: "block", lg: "none" }}
           >
-            <Button variant="secondary" width={{ xs: "100%" }}>
-              <Text fontSize={{ xs: "1.8rem", md: "2rem" }} fontWeight="500">
-                Request a Demo
-              </Text>
-            </Button>
+            <Link href="/demo">
+              <a rel="noopener noreferrer">
+                <Button variant="secondary" width={{ xs: "100%" }}>
+                  <Text
+                    fontSize={{ xs: "1.8rem", md: "2rem" }}
+                    fontWeight="500"
+                  >
+                    Request a Demo
+                  </Text>
+                </Button>
+              </a>
+            </Link>
 
             {/* <CloseMenu width="2rem" height="2rem" /> */}
           </Box>

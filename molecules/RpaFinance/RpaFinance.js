@@ -18,18 +18,24 @@ export const RpaFinance = () => {
       <Grid
         mt="4rem"
         alignItems="center"
-        gridTemplateColumns="1fr 1.5fr"
-        gridColumnGap="3rem"
+        gridTemplateColumns={{ xm: "1fr 2fr" }}
+        gridGap="3rem"
+        justifyItems={{ xs: "center", xm: "start" }}
       >
-        <Box height="26.9rem" width="39rem">
-          <Image
-            src="/images/finance-1.webp"
-            alt="finance-1"
-            quality={100}
-            objectFit="contain"
-            width={390}
-            height={269}
-          />
+        <Box order={{ xs: 1, md: 0 }}>
+          <Box
+            height={{ xs: "22rem", md: "26.9rem" }}
+            width={{ xs: "32rem", md: "39rem" }}
+          >
+            <Image
+              src="/images/finance-1.webp"
+              alt="finance-1"
+              quality={100}
+              objectFit="contain"
+              width={390}
+              height={269}
+            />
+          </Box>
         </Box>
         <Box>
           <Heading

@@ -129,55 +129,61 @@ export const RequestDemo = () => {
                 gridRowGap={{ xs: "2.5rem", xm: "3rem" }}
                 bg="white"
                 overflow="hidden"
+                alignItems="center"
               >
                 <ContactInfo />
 
                 {/* First Name */}
                 <Box>
-                  <Box>
-                    <FormText text="First Name" stric />
-                    <Field
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      placeholder="First Name"
-                      className="profile-input"
-                    />
-                    {errors.firstName && touched.firstName ? (
-                      <Box top="0rem" left="0rem">
-                        <Text
-                          fontSize="1.4rem"
-                          color="primary.1600"
-                          position="absolute"
-                        >
-                          {errors.firstName}
-                        </Text>
-                      </Box>
-                    ) : null}
-                  </Box>
+                  <Grid
+                    gridTemplateColumns={{ xm: "1fr 1fr" }}
+                    gridColumnGap="2rem"
+                  >
+                    <Box>
+                      <FormText text="First Name" stric />
+                      <Field
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        placeholder="First Name"
+                        className="profile-input"
+                      />
+                      {errors.firstName && touched.firstName ? (
+                        <Box top="0rem" left="0rem">
+                          <Text
+                            fontSize="1.4rem"
+                            color="primary.1600"
+                            position="absolute"
+                          >
+                            {errors.firstName}
+                          </Text>
+                        </Box>
+                      ) : null}
+                    </Box>
 
-                  {/* Last Name */}
-                  <Box mt="2.5rem">
-                    <FormText text="Last Name" stric />
-                    <Field
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      placeholder="Last Name"
-                      className="profile-input"
-                    />
-                    {errors.lastName && touched.lastName ? (
-                      <Box top="0rem" left="0rem">
-                        <Text
-                          fontSize="1.4rem"
-                          color="primary.1600"
-                          position="absolute"
-                        >
-                          {errors.lastName}
-                        </Text>
-                      </Box>
-                    ) : null}
-                  </Box>
+                    {/* Last Name */}
+                    <Box mt={{ xs: "2.5rem", xm: "unset" }}>
+                      <FormText text="Last Name" stric />
+                      <Field
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Last Name"
+                        className="profile-input"
+                      />
+                      {errors.lastName && touched.lastName ? (
+                        <Box top="0rem" left="0rem">
+                          <Text
+                            fontSize="1.4rem"
+                            color="primary.1600"
+                            position="absolute"
+                          >
+                            {errors.lastName}
+                          </Text>
+                        </Box>
+                      ) : null}
+                    </Box>
+                  </Grid>
 
                   {/* Email */}
                   <Box mt="2.5rem">

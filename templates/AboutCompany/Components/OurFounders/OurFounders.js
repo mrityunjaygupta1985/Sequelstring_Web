@@ -3,6 +3,7 @@ import { Grid, Box, Text, Flex, Description, SubHeading, Heading } from "atoms";
 import Image from "next/image";
 import MemoLinkedin from "public/assets/icons/Linkedin";
 import MemoTwitter from "public/assets/icons/Twitter";
+import Link from "next/link";
 
 const foundersData = [
   {
@@ -11,6 +12,7 @@ const foundersData = [
     alt: "ravish_sahay",
     name: "RAVISH SAHAY",
     title: "Co-founder & Director",
+    linkeDinUrl: "https://www.linkedin.com/in/shrey-saxena-78aa32139",
   },
   {
     id: 1,
@@ -18,6 +20,7 @@ const foundersData = [
     alt: "phani_bhushan",
     name: "PHANI BHUSHAN",
     title: "Co-founder",
+    linkeDinUrl: "https://www.linkedin.com/in/shrey-saxena-78aa32139",
   },
   {
     id: 2,
@@ -25,6 +28,15 @@ const foundersData = [
     alt: "shrey_saxena",
     name: "SHREY SAXENA",
     title: "Co-founder",
+    linkeDinUrl: "https://www.linkedin.com/in/shrey-saxena-78aa32139",
+  },
+  {
+    id: 3,
+    src: "/images/founders/munish-aggarwal.jpg",
+    alt: "munish-aggarwal",
+    name: "munish aggarwal",
+    title: "Co-founder",
+    linkeDinUrl: "https://www.linkedin.com/in/shrey-saxena-78aa32139",
   },
 ];
 
@@ -33,42 +45,47 @@ export const OurFounders = () => {
     <>
       <Box
         m={{
-          xs: "4rem 2.4rem",
+          xs: "2rem 0rem",
           md: "5rem 4rem",
           xm: "5rem 6rem",
           lg: "10rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
       >
-        <Heading mb="5rem" textAlign="center" Heading="Leadership Team" />
+        <Heading mb="1.5rem" textAlign="center" Heading="Leadership Team" />
+        <Description
+          mb={{ xs: "3rem", md: "5rem" }}
+          mx={{ xs: "2.4rem", md: "unset" }}
+          textAlign="center"
+          fontWeight="500"
+          Description="Our executive board consists of sharp experts in all aspects of document data extraction."
+        />
         <Grid
-          gridTemplateColumns="repeat(3, 1fr)"
-          gridGap={{ xs: "2rem", lg: "4rem" }}
+          gridTemplateColumns="repeat(4, 1fr)"
+          gridGap={{ xs: "2rem", lg: "3rem" }}
+          overflowX={{ xs: "auto", md: "unset" }}
+          p={{ xs: "2.4rem", md: "unset" }}
         >
           {foundersData.map((items, index) => {
             return (
-              <Box key={index} boxShadow="m" p="3rem" borderRadius="1.5rem">
+              <Box key={index} boxShadow="m" p="2.5rem" borderRadius="1.5rem">
                 <Flex alignItems="center" justifyContent="center">
-                  <Box
-                    width={{ xs: "20rem", lg: "20rem" }}
-                    height={{ xs: "20rem", lg: "20rem" }}
-                    className="image-15"
-                  >
+                  <Box width="18rem" height="18rem" className="image-15">
                     <Image
                       src={items?.src}
                       alt={items?.alt}
                       quality={100}
-                      width={200}
-                      height={200}
+                      width={180}
+                      height={180}
                       objectFit="contain"
                     />
                   </Box>
                 </Flex>
                 <Text
                   textTransform="uppercase"
-                  mt="2.5rem"
+                  mt={{ xs: "2rem", md: "2.5rem" }}
                   fontWeight="700"
-                  fontSize="2.2rem"
+                  fontSize={{ xs: "1.8rem", md: "2.2rem" }}
                 >
                   {items?.name}
                 </Text>
@@ -79,12 +96,20 @@ export const OurFounders = () => {
                   Description={items?.title}
                 />
                 <Flex mt="1.5rem" alignItems="center">
-                  <Box color="primary.1800" _hover={{ opacity: 0.8 }}>
-                    <MemoLinkedin width="3rem" height="3rem" cursor="pointer" />
-                  </Box>
-                  <Box color="primary.1800" ml="2rem" _hover={{ opacity: 0.8 }}>
+                  <Link href={items?.linkeDinUrl}>
+                    <a target="_blank">
+                      <Box color="primary.1800" _hover={{ opacity: 0.8 }}>
+                        <MemoLinkedin
+                          width="3rem"
+                          height="3rem"
+                          cursor="pointer"
+                        />
+                      </Box>
+                    </a>
+                  </Link>
+                  {/* <Box color="primary.1800" ml="2rem" _hover={{ opacity: 0.8 }}>
                     <MemoTwitter width="3rem" height="3rem" cursor="pointer" />
-                  </Box>
+                  </Box> */}
                 </Flex>
               </Box>
             );

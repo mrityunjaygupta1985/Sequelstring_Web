@@ -100,8 +100,46 @@ export const ContactForm = () => {
   const [open, setOpen] = useState(false);
 
   const [addNum, setAddNum] = useState(0);
-
+ 
   const onSubmit = "";
+  // const onSubmit = async (values, { resetForm, setSubmitting }) => {
+  //   try {
+  //     await axios
+  //       .post(
+  //         `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/localhost:8000/post/`,
+  //         {
+  //           data: {
+  //             first_name: values?.firstName,
+  //             last_name: values?.lastName, 
+  //             email: values.emailId,
+  //             phone_number: values?.phone,
+  //             company_name: values?.companyName,
+  //             demo_name: slug,
+  //           },
+  //         }
+  //       )
+  //       .then((res) => {
+  //         if (res.status === 200) {
+  //           axios
+  //             .post(
+  //               `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/localhost:8000/post/`,
+  //               {
+  //                 subject: `Request Form Query Received for ${slug}`,
+  //                 html: `<p>Hi, Received your query, <br> Name: ${values?.firstName} ${values?.lastName} <br> Email: ${values?.email} <br>Company: ${values.company} <br>Phone: ${values.phone} </p>`,
+  //               }
+  //             )
+  //             .then((res) => {
+  //               if (res.status === 200) {
+  //                 setSuccess(true);
+  //               }
+  //             });
+  //         }
+  //       });
+  //     resetForm();
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
 
   return (
     <>
@@ -126,7 +164,7 @@ export const ContactForm = () => {
           onSubmit={onSubmit}
         >
           {({ values, errors, touched, setFieldValue }) => (
-            <Form>
+            <Form action="http://localhost:8000/post/" method="POST">
               <Grid
                 gridTemplateColumns={{ xm: "1fr 1fr" }}
                 gridColumnGap={{ xs: "2.5rem", xm: "6rem", lg: "8rem" }}
@@ -136,13 +174,35 @@ export const ContactForm = () => {
                 alignItems="center"
               >
                 {/* <ContactInfo /> */}
-
+                {/* desktop */}
+                <Box display={{ md: "none" }}>
+                  <BoxStyleFirst
+                    mx="auto"
+                    width={{
+                      xs: "25rem",
+                      lg: "35rem",
+                    }}
+                    height={{
+                      xs: "25.6rem",
+                      lg: "35.9rem",
+                    }}
+                  >
+                    <Player
+                      autoplay
+                      loop
+                      src="/images/emailbox.json"
+                      objectfit="contain"
+                    >
+                      <Controls visible={false} />
+                    </Player>
+                  </BoxStyleFirst>
+                </Box>
                 {/* First Name */}
                 <Box
                   border="0.1rem solid"
                   borderColor="primary.800"
-                  borderRadius="3rem"
-                  p="2rem 3rem"
+                  borderRadius={{ xs: "2rem", md: "3rem" }}
+                  p={{ xs: "2rem 1.5rem", md: "2rem 3rem" }}
                 >
                   <Text
                     fontSize={{ xs: "2.4rem", md: "3rem", lg: "3.6rem" }}
@@ -152,50 +212,55 @@ export const ContactForm = () => {
                   >
                     Get in touch with us
                   </Text>
-                  <Box>
-                    <FormText text="First Name" stric />
-                    <Field
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      placeholder="First Name"
-                      className="profile-input"
-                    />
-                    {errors.firstName && touched.firstName ? (
-                      <Box top="0rem" left="0rem">
-                        <Text
-                          fontSize="1.4rem"
-                          color="primary.1600"
-                          position="absolute"
-                        >
-                          {errors.firstName}
-                        </Text>
-                      </Box>
-                    ) : null}
-                  </Box>
+                  <Grid
+                    gridTemplateColumns={{ xm: "1fr 1fr" }}
+                    gridColumnGap="2rem"
+                  >
+                    <Box>
+                      <FormText text="First Name" stric />
+                      <Field
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        placeholder="First Name"
+                        className="profile-input"
+                      />
+                      {errors.firstName && touched.firstName ? (
+                        <Box top="0rem" left="0rem">
+                          <Text
+                            fontSize="1.4rem"
+                            color="primary.1600"
+                            position="absolute"
+                          >
+                            {errors.firstName}
+                          </Text>
+                        </Box>
+                      ) : null}
+                    </Box>
 
-                  {/* Last Name */}
-                  <Box mt="2.5rem">
-                    <FormText text="Last Name" stric />
-                    <Field
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      placeholder="Last Name"
-                      className="profile-input"
-                    />
-                    {errors.lastName && touched.lastName ? (
-                      <Box top="0rem" left="0rem">
-                        <Text
-                          fontSize="1.4rem"
-                          color="primary.1600"
-                          position="absolute"
-                        >
-                          {errors.lastName}
-                        </Text>
-                      </Box>
-                    ) : null}
-                  </Box>
+                    {/* Last Name */}
+                    <Box mt={{ xs: "2.5rem", xm: "unset" }}>
+                      <FormText text="Last Name" stric />
+                      <Field
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Last Name"
+                        className="profile-input"
+                      />
+                      {errors.lastName && touched.lastName ? (
+                        <Box top="0rem" left="0rem">
+                          <Text
+                            fontSize="1.4rem"
+                            color="primary.1600"
+                            position="absolute"
+                          >
+                            {errors.lastName}
+                          </Text>
+                        </Box>
+                      ) : null}
+                    </Box>
+                  </Grid>
 
                   {/* Email */}
                   <Box mt="2.5rem">
@@ -283,27 +348,30 @@ export const ContactForm = () => {
                 </Box>
 
                 {/* Right side box */}
-                <Box mt="-2rem">
-                  <BoxStyleFirst
-                    mx="auto"
-                    width={{
-                      xs: "25rem",
-                      lg: "35rem",
-                    }}
-                    height={{
-                      xs: "25.6rem",
-                      lg: "35.9rem",
-                    }}
-                  >
-                    <Player
-                      autoplay
-                      loop
-                      src="/images/emailbox.json"
-                      objectfit="contain"
+                <Box mt={{ md: "-2rem" }}>
+                  {/* desktop */}
+                  <Box display={{ xs: "none", md: "block" }}>
+                    <BoxStyleFirst
+                      mx="auto"
+                      width={{
+                        xs: "25rem",
+                        lg: "35rem",
+                      }}
+                      height={{
+                        xs: "25.6rem",
+                        lg: "35.9rem",
+                      }}
                     >
-                      <Controls visible={false} />
-                    </Player>
-                  </BoxStyleFirst>
+                      <Player
+                        autoplay
+                        loop
+                        src="/images/emailbox.json"
+                        objectfit="contain"
+                      >
+                        <Controls visible={false} />
+                      </Player>
+                    </BoxStyleFirst>
+                  </Box>
 
                   <Text
                     fontSize={{ xs: "2rem", lg: "2.2rem" }}

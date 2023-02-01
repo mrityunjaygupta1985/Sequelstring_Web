@@ -7,8 +7,8 @@ import styled from "styled-components";
 const BoxStyleSecond = styled(Box)`
   @media only screen and (max-width: 600px) {
     svg {
-      width: 18rem !important;
-      height: 18rem !important;
+      width: 26rem !important;
+      height: 26rem !important;
     }
   }
   @media only screen and (min-device-width: 601px) and (max-device-width: 800px) {
@@ -37,7 +37,7 @@ export const OurMission = () => {
         maxWidth={{ lg: "100%", xl: "144rem" }}
       >
         <Grid
-          gridTemplateColumns="2fr 1fr"
+          gridTemplateColumns={{ md: "2fr 1fr" }}
           gridGap={{ xs: "2rem", lg: "8rem" }}
           alignItems="center"
         >
@@ -66,12 +66,12 @@ export const OurMission = () => {
         </Grid>
 
         <Grid
-          gridTemplateColumns="1fr 2fr"
+          gridTemplateColumns={{ md: "1fr 2fr" }}
           gridGap={{ xs: "2rem", lg: "8rem" }}
           alignItems="center"
           mt="5rem"
         >
-          <Box>
+          <Box order={{ xs: 1, md: 0 }}>
             <Box
               width={{ xs: "100%", lg: "100%" }}
               height={{ xs: "20rem", lg: "25rem" }}
@@ -98,7 +98,7 @@ export const OurMission = () => {
         </Grid>
 
         <Grid
-          gridTemplateColumns="2fr 1fr"
+          gridTemplateColumns={{ md: "2fr 1fr" }}
           gridGap={{ xs: "2rem", lg: "8rem" }}
           alignItems="center"
           mt="5rem"
@@ -131,22 +131,22 @@ export const OurMission = () => {
         </Grid>
 
         <Grid
-          gridTemplateColumns="1fr 2fr"
+          gridTemplateColumns={{ md: "1fr 2fr" }}
           gridGap={{ xs: "2rem", lg: "8rem" }}
           alignItems="center"
           mt="5rem"
         >
-          <Box bg="primary.2400" borderRadius="3rem">
+          <Box bg="primary.2400" borderRadius="3rem" order={{ xs: 1, md: 0 }}>
             <BoxStyleSecond
               mx="auto"
               width={{
-                xs: "18rem",
+                xs: "26rem",
                 md: "22rem",
                 xm: "30rem",
                 lg: "40rem",
               }}
               height={{
-                xs: "18rem",
+                xs: "26rem",
                 md: "22rem",
                 xm: "30rem",
                 lg: "40rem",
@@ -188,7 +188,7 @@ export const OurMission = () => {
         </Grid>
 
         <Grid
-          gridTemplateColumns="2fr 1fr"
+          gridTemplateColumns={{ md: "2fr 1fr" }}
           gridGap={{ xs: "2rem", lg: "8rem" }}
           alignItems="center"
           mt="5rem"

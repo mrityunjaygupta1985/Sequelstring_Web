@@ -19,8 +19,8 @@ export const ContactInfo = () => {
       >
         <Box
           position="absolute"
-          height="30rem"
-          width="30rem"
+          height={{ xs: "25rem", md: "30rem" }}
+          width={{ xs: "25rem", md: "30rem" }}
           bg="primary.2100"
           borderRadius="100%"
           right="-8rem"
@@ -38,7 +38,7 @@ export const ContactInfo = () => {
           mt="2rem"
           mb={{ xs: "3rem", md: "4rem" }}
           color="white"
-          Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          Description="See the power of SequelString Automation Software for yourself. Request a free, no-obligation demo today and experience how it can transform your business operations."
         />
         <Link href="tel:+91-8448447751">
           <a>
@@ -83,6 +83,11 @@ export const ContactInfo = () => {
             <MemoLocation width="2.2rem" height="2.8rem" />
           </Box>
           <Box>
+            {/* <Description
+              color="white"
+              fontWeight="500"
+              Description="Head Office, Mumbai"
+            /> */}
             <Description
               color="white"
               fontWeight="500"

@@ -31,9 +31,10 @@ export const BestInMarket = () => {
     >
       <Grid
         mt="4rem"
-        gridTemplateColumns="1fr 1fr"
+        gridTemplateColumns={{ md: "1fr 1fr" }}
         gridColumnGap="3rem"
-        justifyItems="end"
+        gridRowGap="2rem"
+        justifyItems={{ xs: "center", md: "end" }}
       >
         <Box>
           <Heading mb="1.5rem" Heading="Why we are the best in Market?" />
@@ -43,7 +44,11 @@ Under H1 Roadmap venture is focusing on Organisation’s current problem and add
           />
         </Box>
 
-        <Box width="50rem" height="32.5rem" className="image-30">
+        <Box
+          width={{ xs: "30rem", md: "50rem" }}
+          height={{ xs: "19.4rem", md: "32.5rem" }}
+          className="image-30"
+        >
           <Image
             src="/images/about-page-1.webp"
             alt="about-page-1"
