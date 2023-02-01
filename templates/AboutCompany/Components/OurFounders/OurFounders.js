@@ -12,7 +12,7 @@ const foundersData = [
     alt: "ravish_sahay",
     name: "RAVISH SAHAY",
     title: "Co-founder & Director",
-    linkeDinUrl: "https://www.linkedin.com/in/shrey-saxena-78aa32139",
+    linkeDinUrl: "https://www.linkedin.com/in/ravish-sahay-6b11071",
   },
   {
     id: 1,
@@ -20,27 +20,27 @@ const foundersData = [
     alt: "phani_bhushan",
     name: "PHANI BHUSHAN",
     title: "Co-founder",
-    linkeDinUrl: "https://www.linkedin.com/in/shrey-saxena-78aa32139",
+    linkeDinUrl: "https://in.linkedin.com/in/bhushanphani",
   },
   {
     id: 2,
+    src: "/images/founders/munish-aggarwal.jpg",
+    alt: "munish-aggarwal",
+    name: "munish aggarwal",
+    title: "Co-founder",
+    linkeDinUrl: "https://www.linkedin.com/mwlite/in/munish-agarwala-8b6094b",
+  },
+  {
+    id: 3,
     src: "/images/founders/shrey-saxena.jpg",
     alt: "shrey_saxena",
     name: "SHREY SAXENA",
     title: "Co-founder",
     linkeDinUrl: "https://www.linkedin.com/in/shrey-saxena-78aa32139",
   },
-  {
-    id: 3,
-    src: "/images/founders/munish-aggarwal.jpg",
-    alt: "munish-aggarwal",
-    name: "munish aggarwal",
-    title: "Co-founder",
-    linkeDinUrl: "https://www.linkedin.com/in/shrey-saxena-78aa32139",
-  },
 ];
 
-export const OurFounders = () => {
+export const OurFounders = ({ isLinkeding }) => {
   return (
     <>
       <Box
@@ -107,6 +107,7 @@ export const OurFounders = () => {
                       </Box>
                     </a>
                   </Link>
+
                   {/* <Box color="primary.1800" ml="2rem" _hover={{ opacity: 0.8 }}>
                     <MemoTwitter width="3rem" height="3rem" cursor="pointer" />
                   </Box> */}
