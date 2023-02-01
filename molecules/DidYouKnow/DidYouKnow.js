@@ -381,7 +381,7 @@ export const DidYouKnow = () => {
               <Box
                 key={index}
                 width={{ xs: "18rem", xm: "23rem" }}
-                height={{ xs: "33.5rem", xm: "42.6rem" }}
+                height={{ xs: "33.3rem", xm: "42.6rem" }}
                 border=".2rem solid"
                 borderColor="primary.1800"
                 borderRadius="1.5rem"

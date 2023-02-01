@@ -364,6 +364,33 @@ export const HeroSection = () => {
             />
           </Box>
         </Grid>
+
+        <Grid
+          mt={{ xs: "4rem", md: "8rem" }}
+          gridTemplateColumns={{ md: "2fr 1fr" }}
+          gridGap={{ xs: "3rem", md: "4rem", lg: "8rem" }}
+          justifyItems="center"
+        >
+          <Box>
+            <Heading mb="1.5rem" Heading="Will our Data be Safe?" />
+            <Description Description="Yes, your data is 100% safe & secure and only your chosen people from your own organization have access to your data. Apart from this, your data is in an encrypted format when it is stored in databases as well as during transit between the server and your machine. Multiple security audits and reviews have been done to make sure of this." />
+          </Box>
+          <Box>
+            <Box
+              width={{ xs: "28rem", lg: "40rem" }}
+              height={{ xs: "20.4rem", lg: "29.1rem" }}
+            >
+              <Image
+                src="/images/home-3.jpg"
+                alt="home-3"
+                quality={100}
+                width={400}
+                height={291}
+                objectFit="contain"
+              />
+            </Box>
+          </Box>
+        </Grid>
       </Box>
     </>
   );
