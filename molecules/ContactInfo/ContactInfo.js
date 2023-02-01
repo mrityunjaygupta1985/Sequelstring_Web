@@ -105,12 +105,16 @@ export const ContactInfo = () => {
           </Box>
         </Grid>
         <Flex mt={{ xs: "3rem", xm: "5rem" }} alignItems="center ">
-          <Box color="white" _hover={{ opacity: 0.8 }}>
-            <MemoLinkedin width="3rem" height="3rem" cursor="pointer" />
-          </Box>
-          <Box color="white" ml="3rem" _hover={{ opacity: 0.8 }}>
+          <Link href="https://www.linkedin.com/company/sequelstring-solutions-and-consultancy-pvt-ltd/">
+            <a target="_blank">
+              <Box ml="4rem" color="white" _hover={{ opacity: 0.8 }}>
+                <MemoLinkedin width="3rem" height="3rem" cursor="pointer" />
+              </Box>
+            </a>
+          </Link>
+          {/* <Box color="white" ml="3rem" _hover={{ opacity: 0.8 }}>
             <MemoTwitter width="3rem" height="3rem" cursor="pointer" />
-          </Box>
+          </Box> */}
         </Flex>
       </Box>
     </>

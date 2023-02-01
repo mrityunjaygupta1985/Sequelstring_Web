@@ -132,20 +132,24 @@ export const Footer = () => {
                 </Grid>
               </a>
             </Link>
-            <Flex mt="2rem" alignItems="center ">
-              <Box
-                color="rgb(255, 255, 255, .7)"
-                _hover={{ color: "rgb(255, 255, 255, 1)" }}
-              >
-                <MemoLinkedin width="3rem" height="3rem" cursor="pointer" />
-              </Box>
-              <Box
+            <Flex mt="2rem" alignItems="center">
+              <Link href="https://www.linkedin.com/company/sequelstring-solutions-and-consultancy-pvt-ltd/">
+                <a target="_blank">
+                  <Box
+                    color="rgb(255, 255, 255, .7)"
+                    _hover={{ color: "rgb(255, 255, 255, 1)" }}
+                  >
+                    <MemoLinkedin width="3rem" height="3rem" cursor="pointer" />
+                  </Box>
+                </a>
+              </Link>
+              {/* <Box
                 color="rgb(255, 255, 255, .7)"
                 ml="3rem"
                 _hover={{ color: "rgb(255, 255, 255, 1)" }}
               >
                 <MemoTwitter width="3rem" height="3rem" cursor="pointer" />
-              </Box>
+              </Box> */}
             </Flex>
           </Box>
         </Box>
@@ -249,19 +253,23 @@ export const Footer = () => {
               </a>
             </Link>
             <Flex mt="2rem" alignItems="center ">
-              <Box
-                color="rgb(255, 255, 255, .7)"
-                _hover={{ color: "rgb(255, 255, 255, 1)" }}
-              >
-                <MemoLinkedin width="3rem" height="3rem" cursor="pointer" />
-              </Box>
-              <Box
+              <Link href="https://www.linkedin.com/company/sequelstring-solutions-and-consultancy-pvt-ltd/">
+                <a target="_blank">
+                  <Box
+                    color="rgb(255, 255, 255, .7)"
+                    _hover={{ color: "rgb(255, 255, 255, 1)" }}
+                  >
+                    <MemoLinkedin width="3rem" height="3rem" cursor="pointer" />
+                  </Box>
+                </a>
+              </Link>
+              {/* <Box
                 color="rgb(255, 255, 255, .7)"
                 ml="3rem"
                 _hover={{ color: "rgb(255, 255, 255, 1)" }}
               >
                 <MemoTwitter width="3rem" height="3rem" cursor="pointer" />
-              </Box>
+              </Box> */}
             </Flex>
           </Box>
         </Box>

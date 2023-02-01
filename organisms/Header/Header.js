@@ -42,12 +42,34 @@ export const Header = () => {
       name: "Contact Us",
       url: "contact",
     },
+  ];
 
-    // {
-    //   id: "3",
-    //   name: "Contact",
-    //   url: "contact",
-    // },
+  const mobileData = [
+    {
+      id: "0",
+      name: "Home",
+      url: "/",
+    },
+    {
+      id: "1",
+      name: "About Us",
+      url: "about",
+    },
+    {
+      id: "2",
+      name: "Contact Us",
+      url: "contact",
+    },
+    {
+      id: "3",
+      name: "FAQs",
+      url: "faq",
+    },
+    {
+      id: "4",
+      name: "Request a Demo",
+      url: "demo",
+    },
   ];
   return (
     <Box
@@ -192,7 +214,7 @@ export const Header = () => {
             my="3rem"
             mx={{ xs: "3rem", md: "7rem", lg: "unset" }}
           >
-            {pageData.map((pages) => {
+            {mobileData.map((pages) => {
               return (
                 <Box key={pages.id}>
                   <Flex justifyContent="left">
@@ -218,7 +240,7 @@ export const Header = () => {
             mx={{ xs: "3rem", md: "7rem", lg: "unset" }}
             display={{ xs: "block", lg: "none" }}
           >
-            <Link href="/demo">
+            {/* <Link href="/demo">
               <a rel="noopener noreferrer">
                 <Button variant="secondary" width={{ xs: "100%" }}>
                   <Text
@@ -229,7 +251,7 @@ export const Header = () => {
                   </Text>
                 </Button>
               </a>
-            </Link>
+            </Link> */}
 
             {/* <CloseMenu width="2rem" height="2rem" /> */}
           </Box>
