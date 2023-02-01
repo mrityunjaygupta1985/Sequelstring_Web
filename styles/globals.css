@@ -47,6 +47,16 @@ a {
 .image-circle img {
   border-radius: 30rem;
 }
+.image-15 img {
+  border-radius: 15px;
+ }
+ .image-50 img {
+  border-radius: 50px;
+ }
+
+ .image-30 img {
+  border-radius: 30px;
+ }
 
 .player-wrapper {
   position: relative;
@@ -73,6 +83,19 @@ a {
  .slick-next:before {
   content: '' !important;
   opacity: 1 !important; 
+}
+
+.fade-in-text {
+  animation: fadeIn .8s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -281,3 +304,5 @@ select:-webkit-autofill:focus {
 } */
 
 }
+
+

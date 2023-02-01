@@ -4,11 +4,7 @@ import { ContactForm } from "molecules";
 // Contact us
 
 export const Contact = () => {
-  return (
-    <>
-      <ContactForm />
-    </>
-  );
+  return <ContactForm />;
 };
 
 export default Contact;

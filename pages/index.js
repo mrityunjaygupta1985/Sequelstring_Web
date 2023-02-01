@@ -1,9 +1,12 @@
 import React from "react";
-import { 
+import {
+  Automate,
+  DidYouKnow,
   HeroSection,
   OurClients,
+  RpaFinance,
 } from "molecules";
-import SEO from "seo/SEO"; 
+import SEO from "seo/SEO";
 
 export const Home = () => {
   return (
@@ -14,12 +17,12 @@ export const Home = () => {
         //  description="A portfolio website developed by Yatharth Sah, who is a Frontend Enthusiast and skilled in Next Js, React Js and Headless CMS"
         //  keywords="Sequelstring"
       />
-      <HeroSection /> 
+      <HeroSection />
+      <RpaFinance />
+      <Automate />
+      <OurClients />
 
-      <OurClients />  
-          
-
-       
+      <DidYouKnow />
     </>
   );
 };
