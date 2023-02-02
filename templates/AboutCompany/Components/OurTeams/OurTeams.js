@@ -6,7 +6,7 @@ import MemoLinkedin from "public/assets/icons/Linkedin";
 const foundersData = [
   {
     id: 0,
-    src: "/images/tems/anuj-pratap-singh.webp",
+    src: "/images/tems/anuj-pratap-singh_N1.png",
     alt: "anuj-pratap-singh",
     name: "Anuj Pratap Singh",
     title: "Project Manager",
