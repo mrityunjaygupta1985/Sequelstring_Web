@@ -35,6 +35,7 @@ export const OurMission = () => {
           lg: "10rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
+        mx={{ xl: "auto" }}
       >
         <Grid
           gridTemplateColumns={{ md: "2fr 1fr" }}
@@ -48,11 +49,34 @@ export const OurMission = () => {
               Description="Partner with our customers to achieve excellence by delivering automation through our Scalable Platform, ensuring Compliance, Speed and Accuracy."
             />
           </Box>
-          <Box>
-            <Box
+          <Box bg="primary.2400">
+            <BoxStyleSecond
+              mx="auto"
+              width={{
+                xs: "26rem",
+                md: "22rem",
+                xm: "30rem",
+                lg: "40rem",
+              }}
+              height={{
+                xs: "26rem",
+                md: "22rem",
+                xm: "30rem",
+                lg: "40rem",
+              }}
+            >
+              <Player
+                autoplay
+                loop
+                src="/images/mission-1.json"
+                objectfit="contain"
+              >
+                <Controls visible={false} />
+              </Player>
+            </BoxStyleSecond>
+            {/* <Box
               width={{ xs: "100%", lg: "100%" }}
-              height={{ xs: "20rem", lg: "25rem" }}
-              //   className="image-15"
+              height={{ xs: "20rem", lg: "25rem" }}              
               className="image-30"
             >
               <Image
@@ -61,7 +85,7 @@ export const OurMission = () => {
                 quality={100}
                 layout="fill"
               />
-            </Box>
+            </Box> */}
           </Box>
         </Grid>
 
@@ -71,8 +95,33 @@ export const OurMission = () => {
           alignItems="center"
           mt="5rem"
         >
-          <Box order={{ xs: 1, md: 0 }}>
-            <Box
+          <Box bg="primary.2400" borderRadius="3rem" order={{ xs: 1, md: 0 }}>
+            <BoxStyleSecond
+              mx="auto"
+              width={{
+                xs: "26rem",
+                md: "22rem",
+                xm: "30rem",
+                lg: "40rem",
+              }}
+              height={{
+                xs: "26rem",
+                md: "22rem",
+                xm: "30rem",
+                lg: "40rem",
+              }}
+            >
+              <Player
+                autoplay
+                loop
+                src="/images/vision-2.json"
+                objectfit="contain"
+              >
+                <Controls visible={false} />
+              </Player>
+            </BoxStyleSecond>
+
+            {/* <Box
               width={{ xs: "100%", lg: "100%" }}
               height={{ xs: "20rem", lg: "25rem" }}
               className="image-30"
@@ -81,12 +130,12 @@ export const OurMission = () => {
                 src="/images/vision-1.webp"
                 alt="vision"
                 quality={100}
-                // width={200}
-                // height={200}
+                width={200}
+                height={200}
                 layout="fill"
-                // objectFit="contain"
+                objectFit="contain"
               />
-            </Box>
+            </Box> */}
           </Box>
           <Box>
             <SubHeading SubHeading="VISION" />
@@ -111,8 +160,32 @@ export const OurMission = () => {
             />
           </Box>
 
-          <Box>
-            <Box
+          <Box bg="primary.2400" borderRadius="3rem">
+            <BoxStyleSecond
+              mx="auto"
+              width={{
+                xs: "26rem",
+                md: "22rem",
+                xm: "30rem",
+                lg: "40rem",
+              }}
+              height={{
+                xs: "26rem",
+                md: "22rem",
+                xm: "30rem",
+                lg: "40rem",
+              }}
+            >
+              <Player
+                autoplay
+                loop
+                src="/images/value-2.json"
+                objectfit="contain"
+              >
+                <Controls visible={false} />
+              </Player>
+            </BoxStyleSecond>
+            {/* <Box
               width={{ xs: "100%", lg: "100%" }}
               height={{ xs: "20rem", lg: "25rem" }}
               className="image-30"
@@ -120,13 +193,10 @@ export const OurMission = () => {
               <Image
                 src="/images/value-1.webp"
                 alt="value"
-                quality={100}
-                // width={200}
-                // height={200}
-                layout="fill"
-                // objectFit="contain"
+                quality={100} 
+                layout="fill" 
               />
-            </Box>
+            </Box> */}
           </Box>
         </Grid>
 

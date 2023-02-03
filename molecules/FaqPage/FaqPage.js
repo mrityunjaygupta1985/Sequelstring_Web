@@ -74,6 +74,7 @@ export const FaqPage = () => {
           lg: "8rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
+        mx={{ xl: "auto" }}
       >
         <Heading
           textAlign="center"

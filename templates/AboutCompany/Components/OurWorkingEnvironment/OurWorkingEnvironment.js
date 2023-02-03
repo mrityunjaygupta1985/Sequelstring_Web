@@ -121,7 +121,7 @@ export const OurWorkingEnvironment = () => {
     arrows: false,
     adaptiveHeight: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1500,
   };
 
   return (
@@ -133,6 +133,7 @@ export const OurWorkingEnvironment = () => {
         lg: "10rem 22rem",
       }}
       maxWidth={{ lg: "100%", xl: "144rem" }}
+      mx={{ xl: "auto" }}
     >
       <Heading
         textAlign="center"

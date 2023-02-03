@@ -12,17 +12,12 @@ export const InterestingFacts = ({ src, title, pointer }) => {
         gridRowGap="2rem"
         alignItems="center"
       >
-        <Box width="auto" height={{ xs: "27rem", xm: "35rem" }}>
-          <Image
-            // src="/images/home-1.webp"
-            src={src}
-            alt="home-1"
-            quality={100}
-            // width={420}
-            // height={335}
-            layout="fill"
-            // objectFit="contain"
-          />
+        <Box
+          width="auto"
+          height={{ xs: "27rem", xm: "35rem" }}
+          order={{ xs: 1, md: 0 }}
+        >
+          <Image src={src} alt="home-1" quality={100} layout="fill" />
         </Box>
 
         <Box>

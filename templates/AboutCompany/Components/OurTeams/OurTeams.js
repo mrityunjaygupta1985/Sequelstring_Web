@@ -6,7 +6,7 @@ import MemoLinkedin from "public/assets/icons/Linkedin";
 const foundersData = [
   {
     id: 0,
-    src: "/images/tems/anuj-pratap-singh_N1.png",
+    src: "/images/tems/anuj-pratap-singh.webp",
     alt: "anuj-pratap-singh",
     name: "Anuj Pratap Singh",
     title: "Project Manager",
@@ -61,6 +61,7 @@ export const OurTeams = () => {
           lg: "10rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
+        mx={{ xl: "auto" }}
       >
         <SubHeading
           textAlign="center"

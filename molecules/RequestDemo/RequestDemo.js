@@ -109,6 +109,8 @@ export const RequestDemo = () => {
           xm: "5rem 6rem",
           lg: "5rem 12rem",
         }}
+        maxWidth={{ lg: "100%", xl: "144rem" }}
+        mx={{ xl: "auto" }}
       >
         <Formik
           initialValues={{
