@@ -151,6 +151,7 @@ export const ContactForm = () => {
           lg: "5rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
+        mx={{ xl: "auto" }}
       >
         <Formik
           initialValues={{

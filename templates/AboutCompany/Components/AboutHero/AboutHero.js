@@ -9,6 +9,7 @@ export const AboutHero = () => {
         as="section"
         bg="primary.2400"
         maxWidth={{ lg: "100%", xl: "144rem" }}
+        mx={{ xl: "auto" }}
       >
         <Box
           p={{
