@@ -78,7 +78,12 @@ export const OurTestimonial = () => {
 
   return (
     <>
-      <Box bg="secondary.200" py="8rem">
+      <Box
+        bg="secondary.200"
+        py="8rem"
+        maxWidth={{ lg: "100%", xl: "144rem" }}
+        mx={{ xl: "auto" }}
+      >
         <SubHeading
           textAlign="center"
           mb="4rem"

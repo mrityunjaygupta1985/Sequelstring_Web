@@ -10,30 +10,33 @@ import "slick-carousel/slick/slick-theme.css";
 const teamData = [
   {
     id: 0,
-    src: "/images/banner-4.png",
-    alt: "banner-3",
+    src: "/images/banner-1.webp",
+    alt: "banner-1",
   },
   {
     id: 1,
-    src: "/images/banner-2.png",
-    alt: "banner-1",
-  },
-
-  {
-    id: 2,
-    src: "/images/banner-5.png",
+    src: "/images/banner-2.webp",
     alt: "banner-2",
   },
   {
-    id: 3,
-    src: "/images/banner-6.png",
-    alt: "banner-4",
+    id: 2,
+    src: "/images/banner-3.webp",
+    alt: "banner-3",
   },
-  // {
-  //   id: 4,
-  //   src: "/images/banner-5.gif",
-  //   alt: "banner-5",
-  // },
+];
+
+const robotRuninData = [
+  { id: 1, description: "Reduced Cost" },
+  { id: 2, description: "Compliance with Legal & Regulatory Requirements" },
+  { id: 3, description: "Reduced Carbon Foot Print" },
+  { id: 4, description: "Security & Scalability" },
+  { id: 5, description: "Reducing the Chances of Fraud" },
+  { id: 6, description: "Advanced Governance" },
+  { id: 7, description: "Better Record Keeping" },
+  { id: 8, description: "Productivity & Operational Efficiency" },
+  { id: 9, description: "Reduced Workload" },
+  { id: 10, description: "Increased Quality & Data Analysis" },
+  { id: 11, description: "Speed & Accuracy" },
 ];
 
 import { Controls, Player } from "@lottiefiles/react-lottie-player";
@@ -106,6 +109,7 @@ export const HeroSection = () => {
           color="primary.1800"
           mt="3rem"
           mb="1rem"
+          mx={{ xs: "2.4rem", lg: "unset" }}
           Heading="AI (Artificial Intelligence) Vs IA (Intelligent Automation)"
         />
         <Text
@@ -113,6 +117,7 @@ export const HeroSection = () => {
           fontSize={{ xs: "2rem", md: "2.6rem" }}
           textAlign="center"
           mb="1rem"
+          mx={{ xs: "2.4rem", lg: "unset" }}
         >
           An Integrated Automation Platform
         </Text>
@@ -121,6 +126,7 @@ export const HeroSection = () => {
           fontSize={{ xs: "2rem", md: "2.6rem" }}
           textAlign="center"
           mb="2rem"
+          mx={{ xs: "2.4rem", lg: "unset" }}
         >
           is driving{" "}
           <Text
@@ -201,9 +207,6 @@ export const HeroSection = () => {
         </Box> */}
       </Box>
 
-      <ImpactBusiness />
-      <RpaServices />
-
       <Box
         as="section"
         m={{
@@ -213,45 +216,38 @@ export const HeroSection = () => {
           lg: "6rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
+        mx={{ xl: "auto" }}
       >
+        <Heading
+          mb="3rem"
+          mt={{ xs: "6rem", lg: "10rem" }}
+          textAlign="center"
+          Heading="Component of Hyper Automation"
+        />
         <Grid
           gridTemplateColumns={{ md: "1fr 1fr" }}
-          gridGap={{ xs: "2rem", md: "3.4rem" }}
+          gridGap={{ xs: "2rem", md: "6rem" }}
           alignItems="center"
         >
-          <Box order={{ xs: 1, md: 0 }}>
-            {/* <Heading Heading="The leader in automation software" /> */}
-            <Description
-              mb="1rem"
-              fontWeight="500"
-              Description="Reduced Cost"
-            />
-            <Description
-              mb="1rem"
-              fontWeight="500"
-              Description="Compliance with Legal & Regulatory Requirements"
-            />
-            <Description
-              mb="1rem"
-              fontWeight="500"
-              Description="Reduced Carbon Foot Print"
-            />
-            <Description
-              mb="1rem"
-              fontWeight="500"
-              Description="Security & Scalability"
-            />
-            <Description
-              mb="1rem"
-              fontWeight="500"
-              Description="Reducing the Chances of Fraud"
-            />
-            <Description
-              mb="1rem"
-              fontWeight="500"
-              Description="Advanced Governance"
-            />
-          </Box>
+          <Flex
+            alignItems={{ xs: "center", xm: "left" }}
+            flexDirection={{ xs: "column", xm: "unset" }}
+          >
+            <Box
+              width={{ xs: "32rem", lg: "75rem" }}
+              height={{ xs: "21.8rem", lg: "51rem" }}
+            >
+              <Image
+                src="/images/banner-6.webp"
+                alt="banner-6"
+                quality={100}
+                width={750}
+                height={510}
+                // layout="fill"
+                objectFit="contain"
+              />
+            </Box>
+          </Flex>
 
           <Flex justifyContent="end">
             <BoxStyleFirst
@@ -273,7 +269,6 @@ export const HeroSection = () => {
                 autoplay
                 loop
                 src="/images/robot-1.json"
-                // style={{ width: 510, height: 510 }}
                 objectfit="contain"
               >
                 <Controls visible={false} />
@@ -281,10 +276,25 @@ export const HeroSection = () => {
             </BoxStyleFirst>
           </Flex>
         </Grid>
+      </Box>
 
+      <ImpactBusiness />
+      <RpaServices />
+
+      <Box
+        as="section"
+        m={{
+          xs: "4rem 2.4rem",
+          md: "5rem 4rem",
+          xm: "5rem 6rem",
+          lg: "6rem 12rem",
+        }}
+        maxWidth={{ lg: "100%", xl: "144rem" }}
+        mx={{ xl: "auto" }}
+      >
         <Grid
-          gridTemplateColumns={{ md: "1fr 1fr" }}
-          gridGap={{ xs: "3rem", md: "3.4rem" }}
+          gridTemplateColumns={{ md: "1fr 2fr" }}
+          gridGap={{ xs: "3rem", md: "12rem" }}
           alignItems="center"
           mt={{ xs: "3rem", xm: "3.4rem" }}
         >
@@ -307,61 +317,20 @@ export const HeroSection = () => {
                 objectFit="contain"
               />
             </Box>
-
-            {/* <BoxStyleSecond
-              mx={{ xs: "auto", lg: "unset" }}
-              width={{
-                xs: "18rem",
-                md: "22rem",
-                xm: "30rem",
-                lg: "41rem",
-              }}
-              height={{
-                xs: "18rem",
-                md: "22rem",
-                xm: "30rem",
-                lg: "41rem",
-              }}
-            >
-              <Player
-                autoplay
-                loop
-                src="/images/robot-2.json"                
-                objectfit="contain"
-              >
-                <Controls visible={false} />
-              </Player>
-            </BoxStyleSecond> */}
           </Flex>
 
           <Box>
             {/* order={{ xs: 1, lg: 0 }} */}
-            {/* <Heading Heading="Lorem ipsum dolor sit amet, consectetur" /> */}
-            <Description
-              mb="1rem"
-              fontWeight="500"
-              Description="Better Record Keeping"
-            />
-            <Description
-              mb="1rem"
-              fontWeight="500"
-              Description="Productivity & Operational Efficiency"
-            />
-            <Description
-              mb="1rem"
-              fontWeight="500"
-              Description="Reduced Workload"
-            />
-            <Description
-              mb="1rem"
-              fontWeight="500"
-              Description="Increased Quality & Data Analysis"
-            />
-            <Description
-              mb="1rem"
-              fontWeight="500"
-              Description="Speed & Accuracy"
-            />
+            {robotRuninData.map((items, index) => {
+              return (
+                <Description
+                  key={index}
+                  mb="1rem"
+                  fontWeight="500"
+                  Description={items?.description}
+                />
+              );
+            })}
           </Box>
         </Grid>
 
@@ -381,7 +350,7 @@ export const HeroSection = () => {
               height={{ xs: "20.4rem", lg: "29.1rem" }}
             >
               <Image
-                src="/images/home-3.jpg"
+                src="/images/home-3.webp"
                 alt="home-3"
                 quality={100}
                 width={400}

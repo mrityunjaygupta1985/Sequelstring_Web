@@ -8,7 +8,7 @@ import Link from "next/link";
 const foundersData = [
   {
     id: 0,
-    src: "/images/founders/ravish-sahay.jpg",
+    src: "/images/founders/ravish-sahay.webp",
     alt: "ravish_sahay",
     name: "RAVISH SAHAY",
     title: "Co-founder & Director",
@@ -16,7 +16,7 @@ const foundersData = [
   },
   {
     id: 1,
-    src: "/images/founders/phani-bhushan.jpg",
+    src: "/images/founders/phani-bhushan.webp",
     alt: "phani_bhushan",
     name: "PHANI BHUSHAN",
     title: "Co-founder",
@@ -24,7 +24,7 @@ const foundersData = [
   },
   {
     id: 2,
-    src: "/images/founders/munish-aggarwal.jpg",
+    src: "/images/founders/munish-aggarwal.webp",
     alt: "munish-aggarwal",
     name: "munish aggarwal",
     title: "Co-founder",
@@ -32,7 +32,7 @@ const foundersData = [
   },
   {
     id: 3,
-    src: "/images/founders/shrey-saxena.jpg",
+    src: "/images/founders/shrey-saxena.webp",
     alt: "shrey_saxena",
     name: "SHREY SAXENA",
     title: "Co-founder",
@@ -51,6 +51,7 @@ export const OurFounders = ({ isLinkeding }) => {
           lg: "10rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
+        mx={{ xl: "auto" }}
       >
         <Heading mb="1.5rem" textAlign="center" Heading="Leadership Team" />
         <Description

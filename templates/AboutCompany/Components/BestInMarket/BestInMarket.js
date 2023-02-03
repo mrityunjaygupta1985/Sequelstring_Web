@@ -28,6 +28,7 @@ export const BestInMarket = () => {
         lg: "6rem 12rem",
       }}
       maxWidth={{ lg: "100%", xl: "144rem" }}
+      mx={{ xl: "auto" }}
     >
       <Grid
         mt="4rem"

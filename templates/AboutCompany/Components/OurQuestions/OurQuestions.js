@@ -58,6 +58,7 @@ export const OurQuestions = () => {
           lg: "10rem 12rem",
         }}
         maxWidth={{ lg: "100%", xl: "144rem" }}
+        mx={{ xl: "auto" }}
       >
         <Grid
           gridTemplateColumns={{ md: "1fr 2fr" }}
