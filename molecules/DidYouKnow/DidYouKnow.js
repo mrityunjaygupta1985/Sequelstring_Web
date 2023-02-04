@@ -406,7 +406,7 @@ export const DidYouKnow = () => {
     arrows: false,
     adaptiveHeight: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2500,
     responsive: [
       {
         breakpoint: 480,
@@ -423,7 +423,7 @@ export const DidYouKnow = () => {
       <Box
         as="section"
         p={{
-          xs: "4rem 2.4rem",
+          xs: "4rem 0rem",
           md: "5rem 4rem",
           xm: "5rem 6rem",
           lg: "6rem 12rem",
@@ -442,16 +442,22 @@ export const DidYouKnow = () => {
           gridRowGap="3rem"
           alignItems="center"
         >
-          <Box width={{ xs: "100vw", md: "50vw" }}>
+          <Box
+            width={{ xs: "100vw", md: "50vw" }}
+            // pl={{ xs: "1.4rem", md: "unset" }}
+          >
             <Slider {...settingsdid}>
               {didData.map((items, index) => {
                 return (
                   <>
-                    <Box px=".5rem">
+                    <Box
+                      pl={{ xs: "1.2rem", md: ".5rem" }}
+                      pr={{ xs: "1.2rem", md: ".5rem" }}
+                    >
                       <Box
                         key={index}
-                        width={{ xs: "18rem", xm: "23rem" }}
-                        height={{ xs: "33.3rem", xm: "42.6rem" }}
+                        width={{ xs: "17rem", xm: "23rem" }}
+                        height={{ xs: "31.4rem", xm: "42.6rem" }}
                         border=".2rem solid"
                         borderColor="primary.1800"
                         borderRadius="1.5rem"
@@ -476,6 +482,7 @@ export const DidYouKnow = () => {
           <Flex justifyContent={{ xs: "center", xm: "end" }}>
             <Box
               width={{ xs: "30rem", xm: "50rem" }}
+              // width="100%"
               height={{ xs: "25.6rem", xm: "42.6rem" }}
               className="image-30"
             >
@@ -485,6 +492,7 @@ export const DidYouKnow = () => {
                 quality={100}
                 width={500}
                 height={426}
+                // layout="fill"
                 objectFit="contain"
               />
             </Box>
