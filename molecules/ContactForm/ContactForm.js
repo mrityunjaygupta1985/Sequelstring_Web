@@ -3,6 +3,8 @@ import { Box, Text, Button, Grid, Flex, FormText, Description } from "atoms";
 import * as Yup from "yup";
 import { Formik, Form, Field } from "formik";
 
+import axios from "axios";
+
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
@@ -100,8 +102,27 @@ export const ContactForm = () => {
   const [open, setOpen] = useState(false);
 
   const [addNum, setAddNum] = useState(0);
- 
-  const onSubmit = "";
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const firstName = event.target.firstName.value;
+    const lastName = event.target.lastName.value;
+    const companyName = event.target.companyName.value;
+    const phone = event.target.phone.value;
+    const emailId = event.target.emailId.value;
+    const data = { firstName, lastName, companyName, phone, emailId };
+    axios
+      .post("http://abhisheks.pythonanywhere.com/data/", data)
+      .then((response) => {
+        console.log(response);
+        event.target.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // const onSubmit = "";
   // const onSubmit = async (values, { resetForm, setSubmitting }) => {
   //   try {
   //     await axios
@@ -110,7 +131,7 @@ export const ContactForm = () => {
   //         {
   //           data: {
   //             first_name: values?.firstName,
-  //             last_name: values?.lastName, 
+  //             last_name: values?.lastName,
   //             email: values.emailId,
   //             phone_number: values?.phone,
   //             company_name: values?.companyName,
@@ -165,7 +186,7 @@ export const ContactForm = () => {
           onSubmit={onSubmit}
         >
           {({ values, errors, touched, setFieldValue }) => (
-            <Form action="http://localhost:8000/post/" method="POST">
+            <Form>
               <Grid
                 gridTemplateColumns={{ xm: "1fr 1fr" }}
                 gridColumnGap={{ xs: "2.5rem", xm: "6rem", lg: "8rem" }}
@@ -334,7 +355,8 @@ export const ContactForm = () => {
                   <Button
                     mt="3rem"
                     variant="primary"
-                    onClick={() => setOpen(true)}
+                    // onClick={() => setOpen(true)}
+                    type="button"
                     width={{ xs: "100%", lg: "100%" }}
                   >
                     <Flex alignItems="center" justifyContent="center">
