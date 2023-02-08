@@ -35,6 +35,7 @@ export const RpaFinance = () => {
               objectFit="contain"
               width={390}
               height={269}
+              priority
             />
           </Box>
         </Box>

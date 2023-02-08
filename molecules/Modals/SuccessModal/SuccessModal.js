@@ -1,9 +1,10 @@
+import React from "react";
+import Modal from "react-modal";
+
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 
 import { Box, Text } from "atoms";
 import MemoCloseIcon from "public/assets/icons/CloseIcon";
-
-import Modal from "react-modal";
 
 const customStyles = {
   content: {
@@ -21,14 +22,14 @@ const customStyles = {
   },
 };
 
-export const SuccessModal = ({ isOpen, onRequestClose, ariaHideApp }) => {
+export const SuccessModal = ({ isOpen, onRequestClose }) => {
   return (
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       style={customStyles}
       contentLabel="Example Modal"
-      ariaHideApp={ariaHideApp}
+      ariaHideApp={false}
     >
       <Box
         onClick={onRequestClose}
@@ -49,7 +50,8 @@ export const SuccessModal = ({ isOpen, onRequestClose, ariaHideApp }) => {
         <Player
           autoplay
           loop
-          src="https://assets1.lottiefiles.com/packages/lf20_CH6I9S.json"
+          src="/images/thankyou.json"
+          // src="https://assets1.lottiefiles.com/packages/lf20_CH6I9S.json"
           style={{ width: 300, height: 300 }}
         >
           <Controls visible={false} />

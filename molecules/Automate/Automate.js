@@ -88,6 +88,7 @@ export const Automate = () => {
             objectFit="contain"
             width={372}
             height={222}
+            priority
           />
         </Box>
       </Grid>

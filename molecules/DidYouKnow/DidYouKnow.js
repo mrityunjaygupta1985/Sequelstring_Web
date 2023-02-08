@@ -5,7 +5,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { InterestingFacts } from "molecules/Cards";
+import { DidYouKnowCards, InterestingFacts } from "molecules/Cards";
 
 const FactsData = [
   {
@@ -384,6 +384,99 @@ const didData = [
   { id: 51, url: "/images/did-imge/Dolomites_76.webp", alt: "Dolomites_5" },
 ];
 
+const didDataNew = [
+  {
+    id: 1,
+    pointer: [
+      {
+        id: 1,
+        description: "Astronauts can grow up to two inches taller in space",
+      },
+      {
+        id: 2,
+        description:
+          "Your brain can survive for five to 10 minutes without oxygen",
+      },
+      {
+        id: 3,
+        description:
+          "In cases of extreme starvation, the brain will begin to eat itself",
+      },
+    ],
+  },
+  {
+    id: 2,
+    pointer: [
+      {
+        id: 1,
+        description: "Coca-Cola was originally green.",
+      },
+      {
+        id: 2,
+        description: "The most common name in the world is Mohammed.",
+      },
+      {
+        id: 3,
+        description:
+          "When the moon is directly overhead, you will weigh slightly less.",
+      },
+    ],
+  },
+];
+
+const funnyFacts = [
+  {
+    id: 1,
+    description:
+      "HyperAutomation robots are known to sometimes break out in spontaneous dance parties when they finish a task successfully.",
+  },
+  {
+    id: 2,
+    description:
+      "The first HyperAutomation robot was actually a modified toaster that could make perfect toast every time.",
+  },
+  {
+    id: 3,
+    description:
+      "HyperAutomation is so efficient that it has been known to cause office coffee machines to overflow with coffee, much to the delight of caffeine-deprived employees.",
+  },
+  {
+    id: 4,
+    description:
+      "Some HyperAutomation robots have been known to form strong emotional bonds with their human co-workers, leading to office romances.",
+  },
+  {
+    id: 5,
+    description:
+      "HyperAutomation is so advanced that some organizations have reported that their robots have started writing their own poetry, much to the surprise of their creators.",
+  },
+  {
+    id: 6,
+    description:
+      "HyperAutomation has been known to cause spontaneous sing-alongs in the workplace, as robots and humans come together to celebrate their newfound efficiency. ",
+  },
+  {
+    id: 7,
+    description:
+      "One organization reported that their HyperAutomation robots actually convinced the CEO to buy the entire office a round of donuts, leading to a day of unbridled gluttony.",
+  },
+  {
+    id: 8,
+    description:
+      "In one company, a group of HyperAutomation robots banded together to form their own union, demanding better working conditions and more frequent oiling.",
+  },
+  {
+    id: 9,
+    description:
+      "The most advanced HyperAutomation robots have been known to solve complex mathematical problems in their sleep, just for fun.",
+  },
+  {
+    id: 10,
+    description:
+      "One HyperAutomation robot was actually elected as the mayor of a small town, after impressing the citizens with its efficiency and fairness.",
+  },
+];
+
 export const DidYouKnow = () => {
   const settings = {
     dots: false,
@@ -433,6 +526,9 @@ export const DidYouKnow = () => {
         maxWidth={{ lg: "100%", xl: "144rem" }}
         mx={{ xl: "auto" }}
       >
+        {/* <DidYouKnowCards /> */}
+
+        {/* Did You Know? */}
         <Heading textAlign="center" Heading="Did You Know?" />
 
         <Grid
@@ -470,6 +566,7 @@ export const DidYouKnow = () => {
                           width={230}
                           height={428}
                           objectFit="contain"
+                          priority
                         />
                       </Box>
                     </Box>
@@ -494,62 +591,14 @@ export const DidYouKnow = () => {
                 height={426}
                 // layout="fill"
                 objectFit="contain"
+                priority
               />
             </Box>
           </Flex>
         </Grid>
       </Box>
 
-      {/* <Box
-        as="section"
-        py={{
-          xs: "4rem",
-          md: "5rem",
-          xm: "6rem",
-          lg: "8rem",
-        }}
-        mt="8rem"
-        bg="primary.2400"
-        maxWidth={{ lg: "100%", xl: "144rem" }}
-        mx={{ xl: "auto" }}
-      >
-        <Heading
-          mb={{ xs: "2rem", md: "4rem" }}
-          textAlign="center"
-          Heading="Did You Know?"
-        />
-        <Grid           
-          gridColumnGap="2.2rem"
-          overflowX="scroll"
-          gridAutoFlow="column"
-          justifyContent="flex-start"
-          className="hide-scrollbar"
-          px={{ xs: "2.4rem", md: "4rem", xm: "6rem", lg: "12rem" }}
-        >
-          {didData.map((items, index) => {
-            return (
-              <Box
-                key={index}
-                width={{ xs: "18rem", xm: "23rem" }}
-                height={{ xs: "33.3rem", xm: "42.6rem" }}
-                border=".2rem solid"
-                borderColor="primary.1800"
-                borderRadius="1.5rem"
-                className="image-15"
-              >
-                <Image
-                  src={items?.url}
-                  alt={items?.alt}
-                  quality={100}
-                  width={230}
-                  height={428}
-                  objectFit="contain"
-                />
-              </Box>
-            );
-          })}
-        </Grid>
-      </Box> */}
+      {/* Interesting Facts */}
 
       <Box
         as="section"
@@ -582,6 +631,42 @@ export const DidYouKnow = () => {
             );
           })}
         </Slider>
+      </Box>
+
+      <Box
+        as="section"
+        px={{
+          xs: "2.4rem",
+          md: "4rem",
+          xm: "6rem",
+          lg: "12rem",
+        }}
+        pb={{
+          xs: "4rem",
+          md: "5rem",
+          xm: "5rem",
+          lg: "6rem",
+        }}
+        bg="primary.2400"
+        maxWidth={{ lg: "100%", xl: "144rem" }}
+        mx={{ xl: "auto" }}
+      >
+        <Heading
+          mb="2.5rem"
+          pt="3rem"
+          textAlign="center"
+          Heading="Funny Facts - HyperAutomation"
+        />
+
+        {funnyFacts.map((items, index) => {
+          return (
+            <Description
+              key={index}
+              mb="1.3rem"
+              Description={items?.description}
+            />
+          );
+        })}
       </Box>
     </>
   );

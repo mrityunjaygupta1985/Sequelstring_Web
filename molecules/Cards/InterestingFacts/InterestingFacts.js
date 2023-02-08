@@ -17,7 +17,7 @@ export const InterestingFacts = ({ src, title, pointer }) => {
           height={{ xs: "27rem", xm: "35rem" }}
           order={{ xs: 1, md: 0 }}
         >
-          <Image src={src} alt="home-1" quality={100} layout="fill" />
+          <Image src={src} alt="home-1" quality={100} layout="fill" priority />
         </Box>
 
         <Box>

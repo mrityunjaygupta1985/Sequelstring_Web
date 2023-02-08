@@ -57,6 +57,7 @@ Under H1 Roadmap venture is focusing on Organisation’s current problem and add
             objectFit="contain"
             width={500}
             height={325}
+            priority
           />
         </Box>
       </Grid>

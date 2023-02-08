@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Text, Button, Grid, Flex, FormText, Description } from "atoms";
+import axios from "axios";
 import * as Yup from "yup";
 import { Formik, Form, Field } from "formik";
-
-import axios from "axios";
 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -64,11 +63,9 @@ const validationSchema = Yup.object({
     .required("Last Name is Required")
     .max(50, "Max 50 characters allowed"),
 
-  // phone: Yup.number()
-  //   .typeError("You must specify a number")
-  //   .min(10, "Min value 10.")
-  //   .max(15, "Max value 15.")
-  //   .required("Phone number is Required"),
+  companyName: Yup.string()
+    .required("Company Name is Required")
+    .max(50, "Max 50 characters allowed"),
 
   phone: Yup.string()
     .required("Phone number is Required")
@@ -98,69 +95,32 @@ const renderCountrySelect = ({ placeholder, field, form }) => {
   );
 };
 
-export const ContactForm = () => {
-  const [open, setOpen] = useState(false);
-
-  const [addNum, setAddNum] = useState(0);
-
-  const onSubmit = (event) => {
-    event.preventDefault();
-    const firstName = event.target.firstName.value;
-    const lastName = event.target.lastName.value;
-    const companyName = event.target.companyName.value;
-    const phone = event.target.phone.value;
-    const emailId = event.target.emailId.value;
-    const data = { firstName, lastName, companyName, phone, emailId };
-    axios
-      .post("http://abhisheks.pythonanywhere.com/data/", data)
-      .then((response) => {
-        console.log(response);
-        event.target.reset();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+export const ContactForm = ({ setWarning, setVisibleSuccess }) => {
+  const onSubmit = async (values, { resetForm, setSubmitting }) => {
+    console.log(values);
+    try {
+      await axios
+        .post("http://46.165.225.55:82/data/", {
+          firstName: values?.firstName,
+          lastName: values?.lastName,
+          phone: values?.phone,
+          emailId: values?.emailId,
+          companyName: values?.companyName,
+        })
+        .then((response) => {
+          if (response.status === 200) {
+            setVisibleSuccess(true);
+          } else {
+            setWarning(true);
+          }
+        });
+      resetForm();
+    } catch (e) {
+      console.error(e);
+      setWarning(true);
+    }
+    setSubmitting(false);
   };
-
-  // const onSubmit = "";
-  // const onSubmit = async (values, { resetForm, setSubmitting }) => {
-  //   try {
-  //     await axios
-  //       .post(
-  //         `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/localhost:8000/post/`,
-  //         {
-  //           data: {
-  //             first_name: values?.firstName,
-  //             last_name: values?.lastName,
-  //             email: values.emailId,
-  //             phone_number: values?.phone,
-  //             company_name: values?.companyName,
-  //             demo_name: slug,
-  //           },
-  //         }
-  //       )
-  //       .then((res) => {
-  //         if (res.status === 200) {
-  //           axios
-  //             .post(
-  //               `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/localhost:8000/post/`,
-  //               {
-  //                 subject: `Request Form Query Received for ${slug}`,
-  //                 html: `<p>Hi, Received your query, <br> Name: ${values?.firstName} ${values?.lastName} <br> Email: ${values?.email} <br>Company: ${values.company} <br>Phone: ${values.phone} </p>`,
-  //               }
-  //             )
-  //             .then((res) => {
-  //               if (res.status === 200) {
-  //                 setSuccess(true);
-  //               }
-  //             });
-  //         }
-  //       });
-  //     resetForm();
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
 
   return (
     <>
@@ -185,8 +145,8 @@ export const ContactForm = () => {
           validationSchema={validationSchema}
           onSubmit={onSubmit}
         >
-          {({ values, errors, touched, setFieldValue }) => (
-            <Form>
+          {({ errors, touched }) => (
+            <Form method="post">
               <Grid
                 gridTemplateColumns={{ xm: "1fr 1fr" }}
                 gridColumnGap={{ xs: "2.5rem", xm: "6rem", lg: "8rem" }}
@@ -195,7 +155,6 @@ export const ContactForm = () => {
                 overflow="hidden"
                 alignItems="center"
               >
-                {/* <ContactInfo /> */}
                 {/* desktop */}
                 <Box display={{ md: "none" }}>
                   <BoxStyleFirst
@@ -355,8 +314,7 @@ export const ContactForm = () => {
                   <Button
                     mt="3rem"
                     variant="primary"
-                    // onClick={() => setOpen(true)}
-                    type="button"
+                    type="submit"
                     width={{ xs: "100%", lg: "100%" }}
                   >
                     <Flex alignItems="center" justifyContent="center">
