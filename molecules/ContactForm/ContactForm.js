@@ -117,7 +117,7 @@ export const ContactForm = ({ setWarning, setVisibleSuccess }) => {
       resetForm();
     } catch (e) {
       console.error(e);
-      setWarning(true);
+      // setWarning(true);
     }
     setSubmitting(false);
   };
