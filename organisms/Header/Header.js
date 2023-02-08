@@ -42,6 +42,11 @@ export const Header = () => {
       name: "Contact Us",
       url: "contact",
     },
+    {
+      id: "3",
+      name: "FAQs",
+      url: "faq",
+    },
   ];
 
   const mobileData = [
@@ -105,6 +110,7 @@ export const Header = () => {
                 width={250}
                 height={71}
                 objectFit="contain"
+                priority
               />
             </Box>
           </a>

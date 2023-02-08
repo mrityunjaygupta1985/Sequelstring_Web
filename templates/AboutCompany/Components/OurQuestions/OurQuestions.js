@@ -8,8 +8,8 @@ import styled from "styled-components";
 const BoxStyleFirst = styled(Box)`
   @media only screen and (max-width: 600px) {
     svg {
-      width: 18rem !important;
-      height: 18rem !important;
+      width: 16rem !important;
+      height: 16rem !important;
     }
   }
   @media only screen and (min-device-width: 601px) and (max-device-width: 800px) {

@@ -179,7 +179,7 @@ export const OurMission = () => {
               <Player
                 autoplay
                 loop
-                src="/images/value-2.json"
+                src="/images/value-1.json"
                 objectfit="contain"
               >
                 <Controls visible={false} />
@@ -285,6 +285,7 @@ export const OurMission = () => {
                 // width={200}
                 // height={200}
                 layout="fill"
+                priority
                 // objectFit="contain"
               />
             </Box>

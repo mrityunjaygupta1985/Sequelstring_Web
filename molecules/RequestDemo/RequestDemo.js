@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Text, Button, Grid, Flex, FormText } from "atoms";
-import Image from "next/image";
-import Select from "react-select";
-import * as Yup from "yup";
+
 import { Formik, Form, Field } from "formik";
-import MemoRightArrow from "public/assets/icons/RightArrow";
-import Link from "next/link";
-import { OurTeamModal } from "molecules/Modals";
+import { ContactInfo } from "molecules/ContactInfo";
+
+import axios from "axios";
+import * as Yup from "yup";
+
+import "react-phone-input-2/lib/style.css";
 
 import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
-import MemoLinkedin from "public/assets/icons/Linkedin";
-import MemoTwitter from "public/assets/icons/Twitter";
-import { ContactInfo } from "molecules/ContactInfo";
 
 const customStyle = {
   control: (provided) => ({
@@ -62,6 +59,10 @@ const validationSchema = Yup.object({
     .required("Phone number is Required")
     .matches(phoneRegExp, "Phone number is not valid"),
 
+  companyName: Yup.string()
+    .required("Company Name is Required")
+    .max(50, "Max 50 characters allowed"),
+
   emailId: Yup.string()
     .email("Invalid format")
     .required("Email is Required")
@@ -86,19 +87,32 @@ const renderCountrySelect = ({ placeholder, field, form }) => {
   );
 };
 
-const mealData = [
-  { value: "vegan", label: "vegan" },
-  { value: "lactose intolerant", label: "lactose intolerant" },
-  { value: "jain", label: "jain" },
-  { value: "none", label: "none" },
-];
-
-export const RequestDemo = () => {
-  const [open, setOpen] = useState(false);
-
-  const [addNum, setAddNum] = useState(0);
-
-  const onSubmit = "";
+export const RequestDemo = ({ setWarning, setVisibleSuccess }) => {
+  const onSubmit = async (values, { resetForm, setSubmitting }) => {
+    console.log(values);
+    try {
+      await axios
+        .post("http://46.165.225.55:82/data/", {
+          firstName: values?.firstName,
+          lastName: values?.lastName,
+          phone: values?.phone,
+          emailId: values?.emailId,
+          companyName: values?.companyName,
+        })
+        .then((response) => {
+          if (response.status === 200) {
+            setVisibleSuccess(true);
+          } else {
+            setWarning(true);
+          }
+        });
+      resetForm();
+    } catch (e) {
+      console.error(e);
+      setWarning(true);
+    }
+    setSubmitting(false);
+  };
 
   return (
     <>
@@ -123,7 +137,7 @@ export const RequestDemo = () => {
           validationSchema={validationSchema}
           onSubmit={onSubmit}
         >
-          {({ values, errors, touched, setFieldValue }) => (
+          {({ errors, touched }) => (
             <Form>
               <Grid
                 gridTemplateColumns={{ xm: "1fr 1fr" }}
@@ -258,7 +272,7 @@ export const RequestDemo = () => {
                   <Button
                     mt="3rem"
                     variant="primary"
-                    onClick={() => setOpen(true)}
+                    type="submit"
                     width={{ xs: "100%", lg: "100%" }}
                   >
                     <Flex alignItems="center" justifyContent="center">
@@ -272,60 +286,10 @@ export const RequestDemo = () => {
                   </Button>
                 </Box>
               </Grid>
-
-              {/* select Field */}
-
-              {/* <Grid
-                mt="3rem"
-                gridTemplateColumns={{ md: "1fr 1fr" }}
-                gridGap={{ xs: "2.5rem", md: "3rem" }}
-              >
-                <Box>
-                  <Select
-                    placeholder="Special Meal preferences? (if any)"
-                    name="meal"
-                    options={mealData}
-                    theme={(theme) => ({
-                      ...theme,
-                      colors: {
-                        ...theme.colors,
-                        neutral20: "primary.100",
-                        neutral50: "primary.200",
-                      },
-                    })}
-                    styles={customStyle}
-                  />
-                </Box>
-                <Box>
-                  <Select
-                    name="preferred"
-                    placeholder="Preferred Dates?"
-                    options={preferredData}
-                    theme={(theme) => ({
-                      ...theme,
-                      colors: {
-                        ...theme.colors,
-                        neutral20: "primary.100",
-                        neutral50: "primary.200",
-                      },
-                    })}
-                    styles={customStyle}
-                  />
-                </Box>
-              </Grid>  */}
             </Form>
           )}
         </Formik>
       </Box>
-
-      {/* {open && (
-        <OurTeamModal
-          isOpen={open}
-          onRequestClose={() => {
-            setOpen(false);
-          }}
-        />
-      )} */}
     </>
   );
 };

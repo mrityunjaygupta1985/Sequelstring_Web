@@ -57,6 +57,7 @@ export const TestimonialCards = ({ title, description, src, alt, author }) => {
             height={60}
             quality={100}
             objectFit="contain"
+            priority
           />
         </Box>
         <Box>

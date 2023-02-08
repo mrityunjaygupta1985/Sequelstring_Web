@@ -94,6 +94,7 @@ export const OurTeams = () => {
                       width={200}
                       height={200}
                       objectFit="contain"
+                      priority
                     />
                   </Box>
                 </Flex>

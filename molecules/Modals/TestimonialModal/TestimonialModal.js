@@ -71,6 +71,7 @@ export const TestimonialModal = ({ isOpen, onRequestClose, data }) => {
                   height={233}
                   quality={100}
                   objectFit="contain"
+                  priority
                 />
               </Box>
             </Box>
