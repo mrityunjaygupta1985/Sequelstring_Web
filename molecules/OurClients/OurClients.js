@@ -74,13 +74,16 @@ export const OurClients = () => {
                 alt={items?.alt}
                 quality={100}
                 layout="fill"
+                priority
               />
             </Grid>
           );
         })}
-      </Marquee>
+      </Marquee>;
 
-      {/* right scroll */}
+      {
+        /* right scroll */
+      }
 
       <Marquee {...settings1}>
         {marqueeImage1.map((items, index) => {
@@ -104,11 +107,12 @@ export const OurClients = () => {
                 alt={items?.alt}
                 quality={100}
                 layout="fill"
+                priority
               />
             </Grid>
           );
         })}
-      </Marquee>
+      </Marquee>;
     </Box>
   );
 };

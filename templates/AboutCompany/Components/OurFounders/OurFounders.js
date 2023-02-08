@@ -79,6 +79,7 @@ export const OurFounders = ({ isLinkeding }) => {
                       width={180}
                       height={180}
                       objectFit="contain"
+                      priority
                     />
                   </Box>
                 </Flex>

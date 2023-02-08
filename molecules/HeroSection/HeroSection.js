@@ -166,6 +166,7 @@ export const HeroSection = () => {
                   alt={items?.alt}
                   quality={100}
                   layout="fill"
+                  priority
                 />
               </Box>
             );
@@ -245,6 +246,7 @@ export const HeroSection = () => {
                 height={510}
                 // layout="fill"
                 objectFit="contain"
+                priority
               />
             </Box>
           </Flex>
@@ -315,6 +317,7 @@ export const HeroSection = () => {
                 height={450}
                 // layout="fill"
                 objectFit="contain"
+                priority
               />
             </Box>
           </Flex>
@@ -356,6 +359,7 @@ export const HeroSection = () => {
                 width={400}
                 height={291}
                 objectFit="contain"
+                priority
               />
             </Box>
           </Box>

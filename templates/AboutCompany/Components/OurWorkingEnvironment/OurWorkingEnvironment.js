@@ -162,6 +162,7 @@ export const OurWorkingEnvironment = () => {
                   alt={items?.alt}
                   quality={100}
                   layout="fill"
+                  priority
                 />
               </Box>
             </>
